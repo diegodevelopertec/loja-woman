@@ -1,25 +1,25 @@
 
 import  {v4 as uuid} from 'uuid'
 
-export const dataBurguer=[
+export const dataBlusas=[
     {
         id:uuid(),
-        category:'Hamburguers',
-        name:'X-Egg',
-        price:9,
-        priceDefault:9,
-        imageProduct: `/imgs/bg3.png`,
+        category:'Blusas',
+        name:'Botão Borboleta Boho Regata & Camisa',
+        price:26,
+        priceDefault:26,
+        imageProduct: `/imgs/blusa1.jpg`,
         ingredientes:'Hamburguer,Queijo,Presunto e Maionese',
         qdt:1,
     
     },
     {
         id:uuid(),
-        category:'Hamburguers',
-        name:'X-Salada',
-        price:7,
-        priceDefault:7,
-        imageProduct: `/imgs/bg3.png`,
+        category:'Blusas',
+        name:'Frenchy Botões na frente Florzinhas Boho Regata & Camisa',
+        price:29.5,
+        priceDefault:29.5,
+        imageProduct: `/imgs/blusa2.jpg`,
         ingredientes:'Milho,Hamburguer,Maionese,Tomate,Alface,Queijo',
         qdt:1,
         
@@ -27,41 +27,22 @@ export const dataBurguer=[
     },
     {
         id:uuid(),
-        category:'Hamburguers',
-        name:'X-Dog',
-        price:10,
-        priceDefault:10,
-        imageProduct:`/imgs/bg3.png`,
-        ingredientes:'Milho,Hamburguer,Maionese,Tomate,Alface,Queijo,Batata Palha',
-        qdt:1,
-    },{
-        id:uuid(),
-        category:'Hamburguers',
-        name:'X-Frango',
-        price:10,
-        priceDefault:10,
-        imageProduct: `/imgs/bg3.png`,
-        ingredientes:'bacon,ovo,tomate,alface,queijo',
-        qdt:1
-    },
-    {
-        id:uuid(),
-        category:'Hamburguers',
-        name:'X-Burguer Big',
-        price:10,
-        priceDefault:10,
-        imageProduct: `/imgs/bg3.png`,
+        category:'Blusas',
+        name:'Botão Borboleta Boho Regata & Camisa',
+        price:26,
+        priceDefault:26,
+        imageProduct: `/imgs/blusa1.jpg`,
         ingredientes:'Hamburguer,Queijo,Presunto e Maionese',
         qdt:1,
     
     },
     {
         id:uuid(),
-        category:'Hamburguers',
-        name:'X-Salada',
-        price:7,
-        priceDefault:7,
-        imageProduct: `/imgs/bg3.png`,
+        category:'Blusas',
+        name:'Frenchy Botões na frente Florzinhas Boho Regata & Camisa',
+        price:29.5,
+        priceDefault:29.5,
+        imageProduct: `/imgs/blusa2.jpg`,
         ingredientes:'Milho,Hamburguer,Maionese,Tomate,Alface,Queijo',
         qdt:1,
         
@@ -69,30 +50,22 @@ export const dataBurguer=[
     },
     {
         id:uuid(),
-        category:'Hamburguers',
-        name:'X-Batata',
-        price:9,
-        priceDefault:9,
-        imageProduct:`/imgs/bg3.png`,
-        ingredientes:'Milho,Hamburguer,Maionese,Tomate,Alface,Queijo,Batata Palha',
+        category:'Blusas',
+        name:'Botão Borboleta Boho Regata & Camisa',
+        price:26,
+        priceDefault:26,
+        imageProduct: `/imgs/blusa1.jpg`,
+        ingredientes:'Hamburguer,Queijo,Presunto e Maionese',
         qdt:1,
-    },{
-        id:uuid(),
-        category:'Hamburguers',
-        name:'X-Bacon',
-        price:23,
-        priceDefault:23,
-        imageProduct: `/imgs/bg3.png`,
-        ingredientes:'bacon,ovo,tomate,alface,queijo',
-        qdt:1
+    
     },
     {
         id:uuid(),
-        category:'Hamburguers',
-        name:'X-Salada',
-        price:7,
-        priceDefault:7,
-        imageProduct: `/imgs/bg3.png`,
+        category:'Blusas',
+        name:'Frenchy Botões na frente Florzinhas Boho Regata & Camisa',
+        price:29.5,
+        priceDefault:29.5,
+        imageProduct: `/imgs/blusa2.jpg`,
         ingredientes:'Milho,Hamburguer,Maionese,Tomate,Alface,Queijo',
         qdt:1,
         
@@ -100,271 +73,191 @@ export const dataBurguer=[
     },
     {
         id:uuid(),
-        category:'Hamburguers',
-        name:'X-Batata',
-        price:9,
-        priceDefault:9,
-        imageProduct:`/imgs/bg3.png`,
-        ingredientes:'Milho,Hamburguer,Maionese,Tomate,Alface,Queijo,Batata Palha',
+        category:'Blusas',
+        name:'Botão Borboleta Boho Regata & Camisa',
+        price:26,
+        priceDefault:26,
+        imageProduct: `/imgs/blusa1.jpg`,
+        ingredientes:'Hamburguer,Queijo,Presunto e Maionese',
         qdt:1,
-    },{
-        id:uuid(),
-        category:'Hamburguers',
-        name:'X-Bacon',
-        price:23,
-        priceDefault:23,
-        imageProduct: `/imgs/bg3.png`,
-        ingredientes:'bacon,ovo,tomate,alface,queijo',
-        qdt:1
+    
     },
     {
         id:uuid(),
-        category:'Hamburguers',
-        name:'X-Bacon',
-        price:23,
-        priceDefault:23,
-        imageProduct: `/imgs/bg3.png`,
-        ingredientes:'bacon,ovo,tomate,alface,queijo',
-        qdt:1
+        category:'Blusas',
+        name:'Frenchy Botões na frente Florzinhas Boho Regata & Camisa',
+        price:29.5,
+        priceDefault:29.5,
+        imageProduct: `/imgs/blusa2.jpg`,
+        ingredientes:'Milho,Hamburguer,Maionese,Tomate,Alface,Queijo',
+        qdt:1,
+        
+
     }
   
 ]
 
-export const dataPizza=[
+export const dataIntima=[
     {
         id:uuid(),
-        category:'Pizzas',
-        name:'Pizza de Mussarela',
+        category:'Calcinhas',
+        name:'calcinha Padrão de coração Guarnição de Vieira',
         price:27,
         priceDefault:27,
-        imageProduct: `/imgs/pz1.png`,
+        imageProduct: `/imgs/intima2.png`,
         ingredientes:'bacon,ovo,tomate,alface,queijo',
         qdt:1
     },
     {
         id:uuid(),
-        category:'Pizzas',
-        name:'Pizza Cinco queijos',
+        category:'Calcinhas',
+        name:'calcinha Renda de contraste',
         price:12,
         priceDefault:12,
-        imageProduct: `/imgs/pz1.png`,
+        imageProduct: `/imgs/intima3.png`,
         ingredientes:'bacon,ovo,tomate,alface,queijo',
         qdt:1
     },  {
         id:uuid(),
-        category:'Pizzas',
-        name:'Frango á Bolonesa',
-        price:35,
-        priceDefault:35,
-        imageProduct: `/imgs/pz1.png`,
-        ingredientes:'bacon,ovo,tomate,alface,queijo',
-        qdt:1
-    },  {
-        id:uuid(),
-        category:'Pizzas',
-        name:'Pizza Paulista',
+        category:'Calcinhas',
+        name:'calcinha xadrez De malha desatado',
         price:13,
         priceDefault:13,
-        imageProduct: `/imgs/pz1.png`,
-        ingredientes:'bacon,ovo,tomate,alface,queijo',
-        qdt:1
-    }, {
-        id:uuid(),
-        category:'Pizzas',
-        name:'Pizza de carne',
-        price:23,
-        priceDefault:23,
-        imageProduct: `/imgs/pz1.png`,
+        imageProduct: `/imgs/intima1.png`,
         ingredientes:'bacon,ovo,tomate,alface,queijo',
         qdt:1
     },
     {
         id:uuid(),
-        category:'Pizzas',
-        name:'Pizza Portuguesa',
-        price:14,
-        priceDefault:14,
-        imageProduct: `/imgs/pz1.png`,
-        ingredientes:'bacon,ovo,tomate,alface,queijo',
-        qdt:1
-    },  {
-        id:uuid(),
-        category:'Pizzas',
-        name:'Pizza Bacon Cheddar',
-        price:17,
-        priceDefault:17,
-        imageProduct: `/imgs/pz1.png`,
-        ingredientes:'bacon,ovo,tomate,alface,queijo',
-        qdt:1
-    },  {
-        id:uuid(),
-        category:'Pizzas',
-        name:'Pizza Peru c/Cheddar',
-        price:25,
-        priceDefault:25,
-        imageProduct: `/imgs/pz1.png`,
+        category:'Calcinhas',
+        name:'Leopardo Calcinha',
+        price:13,
+        priceDefault:13,
+        imageProduct: `/imgs/intima4.png`,
         ingredientes:'bacon,ovo,tomate,alface,queijo',
         qdt:1
     },
     {
         id:uuid(),
-        category:'Pizzas',
-        name:'Pizza Portuguesa',
-        price:14,
-        priceDefault:14,
-        imageProduct: `/imgs/pz1.png`,
-        ingredientes:'bacon,ovo,tomate,alface,queijo',
-        qdt:1
-    },  {
-        id:uuid(),
-        category:'Pizzas',
-        name:'Pizza Bacon Cheddar',
-        price:17,
-        priceDefault:17,
-        imageProduct: `/imgs/pz1.png`,
-        ingredientes:'bacon,ovo,tomate,alface,queijo',
-        qdt:1
-    },  {
-        id:uuid(),
-        category:'Pizzas',
-        name:'Pizza Peru c/Cheddar',
-        price:25,
-        priceDefault:25,
-        imageProduct: `/imgs/pz1.png`,
-        ingredientes:'bacon,ovo,tomate,alface,queijo',
-        qdt:1
-    },
-    {
-        id:uuid(),
-        category:'Pizzas',
-        name:'Pizza de Mussarela',
+        category:'Calcinhas',
+        name:'calcinha Padrão de coração Guarnição de Vieira',
         price:27,
         priceDefault:27,
-        imageProduct: `/imgs/pz1.png`,
+        imageProduct: `/imgs/intima2.png`,
         ingredientes:'bacon,ovo,tomate,alface,queijo',
         qdt:1
     },
+    {
+        id:uuid(),
+        category:'Calcinhas',
+        name:'calcinha Renda de contraste',
+        price:12,
+        priceDefault:12,
+        imageProduct: `/imgs/intima3.png`,
+        ingredientes:'bacon,ovo,tomate,alface,queijo',
+        qdt:1
+    },  {
+        id:uuid(),
+        category:'Calcinhas',
+        name:'calcinha xadrez De malha desatado',
+        price:13,
+        priceDefault:13,
+        imageProduct: `/imgs/intima1.png`,
+        ingredientes:'bacon,ovo,tomate,alface,queijo',
+        qdt:1
+    },
+    {
+        id:uuid(),
+        category:'Calcinhas',
+        name:'Leopardo Calcinha',
+        price:13,
+        priceDefault:13,
+        imageProduct: `/imgs/intima4.png`,
+        ingredientes:'bacon,ovo,tomate,alface,queijo',
+        qdt:1
+    }
 ]
 
-export const dataDrinks=[
+export const dataShorts=[
     {
         id:uuid(),
-        category:'Bebidas',
-        name:'Coca Cola 2L',
-        price:3.50,
-        priceDefault:3.50,
-        imageProduct: `/imgs/coca2l.png`,
+        category:'Shorts',
+        name:'Short Curto Fivela Feminino Verão Top Bengaline',
+        price:28.5,
+        priceDefault:28.5,
+        imageProduct: `/imgs/short1.jpg`,
         qdt:1
         
     },
     {
         id:uuid(),
-        category:'Bebidas',
-        name:'Coca Cola 2L',
-        price:3.50,
-        priceDefault:3.50,
-        imageProduct: `/imgs/coca2l.png`,
+        category:'Shorts',
+        name:'Bermuda Bengaline Feminina Tecido Modelador Jacar Italiano',
+        price:25,
+        priceDefault:25,
+        imageProduct: `/imgs/short2.jpg`,
         qdt:1
         
     },
-    {
-        id:3,
-        category:'Bebidas',
-        name:'Coca Cola 2L',
-        price:2,
-        priceDefault:2,
-        imageProduct: `/imgs/coca2l.png`,
-        qdt:1
-        
-    },
+   
     {
         id:uuid(),
-        category:'Bebidas',
-        name:'Coca Cola 2L',
-        price:4,
-        priceDefault:4,
-        imageProduct: `/imgs/coca2l.png`,
+        category:'Shorts',
+        name:'S&J Modas Short femenina 2022',
+        price:23,
+        priceDefault:23,
+        imageProduct: `/imgs/short3.jpg`,
         qdt:1
         
     },    {
         id:uuid(),
-        category:'Bebidas',
-        name:'Coca Cola 2L',
-        price:3.50,
-        priceDefault:3.50,
-        imageProduct: `/imgs/coca2l.png`,
+        category:'Shorts',
+        name:'SEVEN A BEACH JEANS SHORT MORGANA LINHO BARRA DESFIADA - PALHA',
+        price:33,
+        priceDefault:33,
+        imageProduct: `/imgs/short4.jpg`,
+        qdt:1
+        
+    }, {
+        id:uuid(),
+        category:'Shorts',
+        name:'Short Curto Fivela Feminino Verão Top Bengaline',
+        price:28.5,
+        priceDefault:28.5,
+        imageProduct: `/imgs/short1.jpg`,
         qdt:1
         
     },
     {
         id:uuid(),
-        category:'Bebidas',
-        name:'Coca Cola 2L',
-        price:3.50,
-        priceDefault:3.50,
-        imageProduct: `/imgs/coca2l.png`,
+        category:'Shorts',
+        name:'Bermuda Bengaline Feminina Tecido Modelador Jacar Italiano',
+        price:25,
+        priceDefault:25,
+        imageProduct: `/imgs/short2.jpg`,
         qdt:1
         
     },
+   
     {
         id:uuid(),
-        category:'Bebidas',
-        name:'Coca Cola 2L',
-        price:1.20,
-        priceDefault:1.20,
-        imageProduct: `/imgs/coca2l.png`,
+        category:'Shorts',
+        name:'S&J Modas Short femenina 2022',
+        price:23,
+        priceDefault:23,
+        imageProduct: `/imgs/short3.jpg`,
+        qdt:1
+        
+    },    {
+        id:uuid(),
+        category:'Shorts',
+        name:'SEVEN A BEACH JEANS SHORT MORGANA LINHO BARRA DESFIADA - PALHA',
+        price:33,
+        priceDefault:33,
+        imageProduct: `/imgs/short4.jpg`,
         qdt:1
         
     },
-    {
-        id:uuid(),
-        category:'Bebidas',
-        name:'Coca Cola 2L',
-        price:2.30,
-        priceDefault:2.30,
-        imageProduct: `/imgs/coca2l.png`,
-        qdt:1
-        
-    },
-    {
-        id:uuid(),
-        category:'Bebidas',
-        name:'Coca Cola 2L',
-        price:3.50,
-        priceDefault:3.50,
-        imageProduct: `/imgs/coca2l.png`,
-        qdt:1
-        
-    },
-    {
-        id:uuid(),
-        category:'Bebidas',
-        name:'Coca Cola 2L',
-        price:3.50,
-        priceDefault:3.50,
-        imageProduct: `/imgs/coca2l.png`,
-        qdt:1
-        
-    },
-    {
-        id:uuid(),
-        category:'Bebidas',
-        name:'Coca Cola 2L',
-        price:3.50,
-        priceDefault:3.50,
-        imageProduct: `/imgs/coca2l.png`,
-        qdt:1
-        
-    },
-    {
-        id:uuid(),
-        category:'Bebidas',
-        name:'Coca Cola 2L',
-        price:3.50,
-        priceDefault:3.50,
-        imageProduct: `/imgs/coca2l.png`,
-        qdt:1
-        
-    }
+  
     
 ]

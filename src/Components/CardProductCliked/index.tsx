@@ -68,7 +68,7 @@ const setData=()=>{
         <S.ContainerData>
             <div className="data-top">
                 <div className="cx-name">
-                   <span className='name'> {data.name} </span><small className="category">{data.category}</small>
+                   <span className='name'> {data.name} </span>
                 </div>
                 <div className="ingredientes">
                    <p> {data.ingredientes}</p>

@@ -18,18 +18,17 @@ export const Container=styled.div`
 
 export const  ContainerImage=styled.div`
    // background: ${ThemeStyle.bgTheme};
-    height: 100px;
+   background: white;
+    height: auto;
     display: flex;
-    padding: 12px 0;
     justify-content:center;
     border-top-left-radius:6px;
     border-top-right-radius:6px;
     width:100%;
   
     img{
-        max-width:120px;
-        height:120px;
-        margin-top:20px;
+       width:100%;
+        height:420px;
         @media screen and (max-width:600px){
         width: 70px;
         height: 70px;

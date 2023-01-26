@@ -48,8 +48,10 @@ export const ContainerImage=styled.div`
     border-top-left-radius:6px;
     border-bottom-left-radius:6px;
     img{
-        width: 180px;
-        height: 180px;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius:6px;
+        border-bottom-left-radius:6px;
        
     }
         @media screen and (max-width:600px){
@@ -83,12 +85,12 @@ export const ContainerData=styled.div`
         .name{
             margin-right:5px;
             font-weight:bold;
-            font-size:23px;
+            font-size:18px;
            
         }
         .category{
             color:${ThemeStyle.bgAppSystem};
-            font-size:13px;
+            font-size:9px;
            
         }
         padding: 10px 0;
