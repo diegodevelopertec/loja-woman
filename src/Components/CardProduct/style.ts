@@ -7,7 +7,6 @@ export const Container=styled.div`
     box-shadow:0 0 3px #141413;
     margin:12px 0;
     border-radius:6px;
-    ///background: ${ThemeStyle.bgCardProductBottom};
     background: #ebedf0;
     @media screen and (max-width:600px){
     font-size:10px;
@@ -17,7 +16,7 @@ export const Container=styled.div`
 `
 
 export const  ContainerImage=styled.div`
-   // background: ${ThemeStyle.bgTheme};
+  
    background: white;
     height: auto;
     display: flex;
@@ -27,18 +26,15 @@ export const  ContainerImage=styled.div`
     width:100%;
   
     img{
-       width:100%;
+        width:100%;
         height:420px;
+      
         @media screen and (max-width:600px){
-        width: 70px;
-        height: 70px;
-        }
+         height: 180px;
+     
+       }
     }
 
-    @media screen and (max-width:600px){
-      height: 70px;
-     
-    }
 
 
 `
@@ -52,15 +48,17 @@ export const DataProduct=styled.div`
 
         .info-product{
             margin: 15px 0;
-            
+            height: 100px;
+           
             .category--name{
                     color: ${ThemeStyle.colorIngredientsCategory};
                     padding: 5px 0;
                     font-size:11px;
                     text-transform: capitalize;
+                
                 }
                 h4{
-                    font-size:17px;
+                    font-size:13px;
                     color: ${ThemeStyle.colorTitleCard};
                    
                 }
@@ -106,7 +104,7 @@ export const DataProduct=styled.div`
         padding: 15px 5px;
         width: 100%;
         margin: 13px 0;
-      
+        height: 90px;
         button{
             font-family:Arial;
             font-weight:bold;
@@ -128,12 +126,11 @@ export const DataProduct=styled.div`
         }
                     
             }
-         }
+         
          @media screen and (max-width:600px){
               padding:0;
          }
-    }
-
+    
     @media screen and (max-width:600px){
       padding: 0 5px;
       width: 100%;

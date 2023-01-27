@@ -39,7 +39,7 @@ export const ProductBad=({data}:Props)=>{
             </div>
             <div className="area-text">
                 <span className='name'>
-                    {data.name}
+                    {data.name.length > 30 ? data.name.slice(0,20) + '...' : data.name}
                 </span>
                 <span className='price'>
                     R$ {priceProduct.toFixed(2)}

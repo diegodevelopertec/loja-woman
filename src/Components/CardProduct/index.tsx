@@ -20,9 +20,6 @@ const ClickData=()=>onClick(data)
             <div className='info-product'>
                 <p className='category--name'>{data?.category}</p>
                 <h4>{data?.name} </h4>
-                <p className='ingredientes-text'>
-                  {data?.ingredientes ? data?.ingredientes : null }  
-                </p>
                 <p className="price">
                     R$ {data?.price.toFixed(2)}
                 </p>

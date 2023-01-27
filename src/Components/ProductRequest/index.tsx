@@ -23,7 +23,7 @@ export const ProductRequest=({data}:Props)=>{
                 </div>
                 <div className="area-text">
                     <span className='name'>
-                        {data.name}
+                        {data.name.length > 30 ? data.name.slice(0,27) + '...' : data.name}
                     </span>  
                     <span className='price'>
                         R$ {data.price.toFixed(2)}

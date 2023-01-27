@@ -3,10 +3,6 @@ import * as S from './style'
 import { CardProduct } from "../../Components/CardProduct"
 import { Product } from "../../Types/Products"
 import { dataBlusas } from "../../data/Product"
-import BebidasIcon from '../../assets/imgs/iconBebida.png'
-import ResturantIcon from '../../assets/imgs/restaurante.png'
-import PizzaIcon from '../../assets/imgs/iconspizza.png'
-import LanchesIcon from '../../assets/imgs/iconhamburguer.png'
 import { ButtonMenuCategory } from "../../Components/ButtonMenuCategory"
 import { CardCliked } from "../../Components/CardProductCliked"
 import { dataShorts } from "../../data/Product"
@@ -17,11 +13,10 @@ import { ThemeStyle } from "../../../styled"
 import { LoginModal } from "../LoginModal"
 import { useContextApp } from "../../hooks/useContextApp"
 import { BannerPromotions } from "../../Components/BannerPromotions"
-import { useLocation, useNavigate } from "react-router-dom"
 import { useModalLogin } from "../../hooks/useModeLogin"
 import { useAuthContext } from "../../hooks/useContextAuth"
 import  womanBurguer from './../../assets/imgs/banner_main_rf.png'
-import  womanBurguerMain from './../../assets/imgs/banner_main2.png'
+import  womanBannerMain from './../../../public/imgs/bannerImage.png'
 import BlusaIcon from  './../../../public/imgs/blusasicon.png'
 import CalcinhaIcon from  './../../../public/imgs/calcinhaicon.png'
 import ShortsIcon from  './../../../public/imgs/jeans.png'
@@ -104,7 +99,7 @@ return <S.Container>
      
     {  <S.ContainerCaseLogged className="cx-logado">
                 <div className="area-img">
-                    <img src={user?.name ? womanBurguerMain : womanBurguer} alt="" />
+                    <img src={womanBannerMain} alt="" />
                 </div>
                 <div className="area-text">
                         <div className="txt">

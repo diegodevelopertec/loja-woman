@@ -70,9 +70,7 @@ const setData=()=>{
                 <div className="cx-name">
                    <span className='name'> {data.name} </span>
                 </div>
-                <div className="ingredientes">
-                   <p> {data.ingredientes}</p>
-                </div>
+               
                 <div className="cx-price">
                     <div className="price-modal">
                         R$ {priceModal.toFixed(2)}

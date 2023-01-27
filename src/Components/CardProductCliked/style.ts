@@ -3,8 +3,8 @@ import {ThemeStyle} from '../../../styled'
 
 export const Container=styled.div`
     display: flex;
-    width:700px;
-    box-shadow:0 0 5px #141413;
+    width:770px;
+    box-shadow:0 0 15px #141413;
     border-radius:6px;
     background: ${ThemeStyle.bgCardProductBottom};
  
@@ -40,7 +40,7 @@ export const Container=styled.div`
 `
 
 export const ContainerImage=styled.div`
-    width:35%;
+    width:39%;
     background: ${ThemeStyle.bgTheme};
     display: flex;
     justify-content:center;
@@ -56,13 +56,11 @@ export const ContainerImage=styled.div`
     }
         @media screen and (max-width:600px){
             width: 100%;
-            height: 170px;
+          
+            height: 34%;
             margin-bottom:35px;
             border-radius:0;
-            img{
-                margin-top:100px;
-                margin-bottom:20px;
-            }
+           
         }
         
        
@@ -209,7 +207,7 @@ export const ContainerData=styled.div`
   
 
 @media screen and (max-width:600px){
-    padding: 10px;
+    
    .cx-qdt{
         align-items:center;
         text-align:center;

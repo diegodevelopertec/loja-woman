@@ -5,6 +5,7 @@ import { ThemeStyle } from "../../../styled";
 export const Container=styled.div`
 display: flex;
 justify-content:space-between;
+align-items:center;
 padding:10px 5px;
 font-size:13px;
 width: 100%;
@@ -20,9 +21,11 @@ border-radius:5px;
     }
     .area-left{
     display: flex;
+   
       img{
-        height:30px;
-        width:30px;
+        height:65px;
+       width: 60px;
+       border-radius:3px;
       }
       .price{
         color: ${ThemeStyle.bgTheme};
