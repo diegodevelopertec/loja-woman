@@ -75,7 +75,7 @@ export const Cart=()=>{
     
         
        state.products=[]
-       navigate('/pedidos')
+       navigate('/compras')
     }
    
 

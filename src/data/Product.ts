@@ -9,7 +9,6 @@ export const dataBlusas=[
         price:26,
         priceDefault:26,
         imageProduct: `/imgs/blusa1.jpg`,
-        ingredientes:'Hamburguer,Queijo,Presunto e Maionese',
         qdt:1,
     
     },
@@ -20,7 +19,6 @@ export const dataBlusas=[
         price:29.5,
         priceDefault:29.5,
         imageProduct: `/imgs/blusa2.jpg`,
-        ingredientes:'Milho,Hamburguer,Maionese,Tomate,Alface,Queijo',
         qdt:1,
         
 
@@ -32,7 +30,6 @@ export const dataBlusas=[
         price:26,
         priceDefault:26,
         imageProduct: `/imgs/blusa1.jpg`,
-        ingredientes:'Hamburguer,Queijo,Presunto e Maionese',
         qdt:1,
     
     },
@@ -43,7 +40,6 @@ export const dataBlusas=[
         price:29.5,
         priceDefault:29.5,
         imageProduct: `/imgs/blusa2.jpg`,
-        ingredientes:'Milho,Hamburguer,Maionese,Tomate,Alface,Queijo',
         qdt:1,
         
 
@@ -55,7 +51,6 @@ export const dataBlusas=[
         price:26,
         priceDefault:26,
         imageProduct: `/imgs/blusa1.jpg`,
-        ingredientes:'Hamburguer,Queijo,Presunto e Maionese',
         qdt:1,
     
     },
@@ -66,7 +61,6 @@ export const dataBlusas=[
         price:29.5,
         priceDefault:29.5,
         imageProduct: `/imgs/blusa2.jpg`,
-        ingredientes:'Milho,Hamburguer,Maionese,Tomate,Alface,Queijo',
         qdt:1,
         
 
@@ -78,7 +72,6 @@ export const dataBlusas=[
         price:26,
         priceDefault:26,
         imageProduct: `/imgs/blusa1.jpg`,
-        ingredientes:'Hamburguer,Queijo,Presunto e Maionese',
         qdt:1,
     
     },
@@ -89,7 +82,6 @@ export const dataBlusas=[
         price:29.5,
         priceDefault:29.5,
         imageProduct: `/imgs/blusa2.jpg`,
-        ingredientes:'Milho,Hamburguer,Maionese,Tomate,Alface,Queijo',
         qdt:1,
         
 

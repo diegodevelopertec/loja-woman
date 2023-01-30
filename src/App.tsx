@@ -1,15 +1,12 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react'
 import * as S from '../styled'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Routes } from '../Routes'
 import { ButtonMenu } from './Components/ButtonMenu'
-import BurguerImage from '.././src/assets/imgs/burguer.png'
 import UserIcon from '.././src/assets/imgs/user.png'
 import LojaIcon from '.././src/assets/imgs/lojaicon.png'
 import ComprasIcon from '././assets/imgs/comprasIcon.png'
-import BurguerIcon from './../src/assets/imgs/iconhamburguer.png'
+
 
 const App=()=>{
 
@@ -23,12 +20,11 @@ const App=()=>{
                   text='inicio'
                   marginvertical='10' />
               <ButtonMenu 
-                  link={'/pedidos'}  
+                  link={'/compras'}  
                   src={ComprasIcon} 
-                
                   marginhorizontal='10' 
                   marginvertical='10' 
-                  text='pedidos'/>
+                  text='compras'/>
                     
               <ButtonMenu  
                  src={UserIcon} 
@@ -43,7 +39,7 @@ const App=()=>{
           <S.HeaderApp>
             <S.CardLoja>
               <div className="logo">
-                   <img src={BurguerIcon} alt="" /> <span>BãoLanche</span>
+                <span>laddyMODAS</span>
               </div>
              
             </S.CardLoja>

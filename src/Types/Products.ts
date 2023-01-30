@@ -6,7 +6,7 @@ export type Product={
     price: number,
     priceDefault:number ,
     imageProduct:string,
-    ingredientes?:string,
+    images?:[],
     qdt:number,
     tamanho?:string,
     mumero?:string

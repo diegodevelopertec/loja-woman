@@ -12,7 +12,7 @@ export const Routes=()=>{
     return <>
             <Rotas>
              <Route path='/' element={<Showcase/>} />
-             <Route path='/pedidos'  element={<DeliveryPage/>} />
+             <Route path='/compras'  element={<DeliveryPage/>} />
              <Route path='/user'  element={<AccountPage/>} />
            
           </Rotas>

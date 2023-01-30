@@ -39,6 +39,7 @@ export const Container=styled.div`
         h2{
             color:  ${ThemeStyle.bgTheme};
             font-size:18px;
+            margin: 13px;
             
         }
 

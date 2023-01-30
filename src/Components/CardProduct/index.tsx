@@ -25,7 +25,7 @@ const ClickData=()=>onClick(data)
                 </p>
             </div>
             <div className="cx-btn-product">
-               <button onClick={ClickData}>fazer pedido</button>
+               <button onClick={ClickData}>detalhes</button>
             </div>
         </S.DataProduct>
     </S.Container>

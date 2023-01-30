@@ -53,7 +53,7 @@ export const DataProduct=styled.div`
             .category--name{
                     color: ${ThemeStyle.colorIngredientsCategory};
                     padding: 5px 0;
-                    font-size:11px;
+                    font-size:13px;
                     text-transform: capitalize;
                 
                 }

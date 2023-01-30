@@ -40,10 +40,13 @@ export const LoginModal=({closeModal}:Props)=>{
                 <button onClick={closeModal}>voltar</button>
            </div>
            <div className="cx-login">
-              
-               <span className='cx-logo'><img src={LojaIcon} alt="" /> <h2>Rangoo</h2></span>
-           </div>
-            <p>Faça login na sua conta para continuar o pedido :</p>
+            <span className='cx-logo'>
+                <h2 className='name-loja'>laddyMODAS</h2>
+                <p>Faça login na sua conta para continuar o pedido :</p>
+                </span>
+          
+          </div>
+           
         </div>
         <div className="form">
             <form action=""  onSubmit={handleSubmit(submitForm)}>

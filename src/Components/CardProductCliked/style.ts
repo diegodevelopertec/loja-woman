@@ -9,7 +9,7 @@ export const Container=styled.div`
     background: ${ThemeStyle.bgCardProductBottom};
  
 
-   @media screen and (max-width:600px){
+   @media screen and (max-width:680px){
         position: absolute;
         top:0;
         left:0;
@@ -23,19 +23,12 @@ export const Container=styled.div`
         overflow:hidden;
         border-radius:0;
         margin: 0;
+  
        
        
    }
 
-   @media screen and (max-width:280px){
-         *{
-            font-size:12px;
-          
-         }
-         .area-btn-qdt{
-            margin: 10px 0;
-         }
-        }
+ 
  
 `
 
@@ -54,12 +47,18 @@ export const ContainerImage=styled.div`
         border-bottom-left-radius:6px;
        
     }
-        @media screen and (max-width:600px){
-            width: 100%;
-          
-            height: 34%;
-            margin-bottom:35px;
-            border-radius:0;
+        @media screen and (max-width:680px){
+            width: 100vw;
+            padding: 10px;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            border: 0;
+            img{
+                width: 55vw;
+                border-radius:5px;
+               height: 35vh;
+            }
            
         }
         

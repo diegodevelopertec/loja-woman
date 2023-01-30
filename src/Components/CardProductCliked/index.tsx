@@ -41,7 +41,6 @@ const setData=()=>{
         category: data.category,
         name: data.name,
         imageProduct: data.imageProduct,
-        ingredientes: data.ingredientes,
         qdt:qdtProduct, 
         price: priceModal,
         priceDefault:data.price
@@ -68,7 +67,7 @@ const setData=()=>{
         <S.ContainerData>
             <div className="data-top">
                 <div className="cx-name">
-                   <span className='name'> {data.name} </span>
+                   <span className='name'>  {data.name.length > 30 ? data.name.slice(0,27) + '...' : data.name}</span>
                 </div>
                
                 <div className="cx-price">
@@ -91,7 +90,7 @@ const setData=()=>{
                </div>
                <div className="cx-buttons">
                         <button className='btn-cancel' onClick={funcOffModal}>voltar</button>
-                    <button className='btn-save' onClick={()=>setData()}>adicionar á sacola</button> 
+                    <button className='btn-save' onClick={()=>setData()}>adicionar ao carrinho</button> 
             </div>
             </div>
         </S.ContainerData>
