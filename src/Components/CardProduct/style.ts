@@ -4,7 +4,7 @@ import {ThemeStyle} from '../../../styled'
 
 export const Container=styled.div`
   
-    box-shadow:0 0 3px #141413;
+    box-shadow:0 0 4px #141413;
     margin:12px 0;
     border-radius:6px;
     background: #ebedf0;
@@ -21,13 +21,15 @@ export const  ContainerImage=styled.div`
     height: auto;
     display: flex;
     justify-content:center;
+    width:100%;
     border-top-left-radius:6px;
     border-top-right-radius:6px;
-    width:100%;
   
     img{
         width:100%;
         height:420px;
+        border-top-left-radius:6px;
+    border-top-right-radius:6px;
       
         @media screen and (max-width:600px){
          height: 180px;

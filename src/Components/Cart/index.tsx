@@ -132,7 +132,7 @@ export const Cart=()=>{
                 <button onClick={()=>setDataToRequests()}>finalizar compra</button>
                 </div>
               </>  : <div className='error-bad'>
-                        <h3>Nenhum pedido adicionado ainda </h3>
+                        <h3>Nenhum produto adicionado ainda </h3>
                         <img  src={ErrorIcon} />
               </div>
            }

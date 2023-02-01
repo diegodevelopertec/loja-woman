@@ -6,11 +6,13 @@ export const Container=styled.div`
     width:770px;
     box-shadow:0 0 15px #141413;
     border-radius:6px;
+ 
     background: ${ThemeStyle.bgCardProductBottom};
  
 
    @media screen and (max-width:680px){
         position: absolute;
+    
         top:0;
         left:0;
         bottom: 0;
@@ -23,6 +25,7 @@ export const Container=styled.div`
         overflow:hidden;
         border-radius:0;
         margin: 0;
+        
   
        
        
@@ -54,6 +57,7 @@ export const ContainerImage=styled.div`
             justify-content:center;
             align-items:center;
             border: 0;
+         
             img{
                 width: 55vw;
                 border-radius:5px;
@@ -72,7 +76,7 @@ export const ContainerData=styled.div`
     flex-direction:column;
     flex:1;
     padding: 0 5px;
-   
+ 
 
  .data-top{
     margin: 15px 0;
@@ -220,7 +224,6 @@ export const ContainerData=styled.div`
     .price-modal{
         text-align:center;
         margin: 20px 0;
-        background: #eee;
         padding: 12px 5px;
         border-radius:5px;
         width:70vw;

@@ -27,16 +27,17 @@ export const ContainerBanner=styled.div`
 `
 export const CategorySectionProducts=styled.div`
     margin: 60px 0 0 ;
-    color:${ThemeStyle.colorTitleCard};
+    color:${ThemeStyle.bgTheme};
     font-weight:bold;
     background-color:${ThemeStyle.bgAppSystem};
-    flex-direction:columns;
-    font-size:15px;
-
-
+    font-size:18px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
     .category-title{
        padding-top:15px;
         display: flex;
+        justify-content:center;
         span{
             margin-left:10px;
             text-decoration:underline;
@@ -147,21 +148,17 @@ export const ContainerCaseLogged=styled.div`
 
 
 @media screen and (max-width:950px){
-
-  display:none;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  
   width: 100%;
-  margin: 90px 0;
- 
+ display: none;
+ flex-direction:column;
     
     .area-img{
       width: 100%;
       display: flex;
       justify-content:center;
       align-items:center;
-      height: 300px;
+      height: 350px;
       img{
         height: 100%;
       }
