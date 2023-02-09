@@ -118,7 +118,7 @@ export const AreaAdress=styled.div`
     font-style:italic;
     background: ${ThemeStyle.bgAppSystem};
     padding:  10px;
-    border-radius:9px;
+    border-radius:5px;
      h4{
         padding: 10px ;
      }

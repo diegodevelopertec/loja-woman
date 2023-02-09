@@ -41,12 +41,7 @@ export const Showcase=()=>{
  
 
 
-    const clikedOnModal=()=>{ 
-       setModalToCard(true)
-    }
-    const closeModal=()=>{
-        setModalToCard(false)
-    }
+ 
 
 
     const actionDisplayBlouses=()=>{
@@ -72,7 +67,7 @@ export const Showcase=()=>{
     //função de setar dados de cada car para o card modal
     const returnDataClikedProduct=(data:Product)=>{
         setDataProductCliked(data)
-        clikedOnModal()
+        setModalToCard(true)
    
     }
 
@@ -163,7 +158,7 @@ return <S.Container>
     </S.ShowcaseProduct>
    
     {stateModalToCard && <S.ContainerModal>
-        <CardCliked   data={dataProductCliked} funcOffModal={closeModal}/>
+        <CardCliked   data={dataProductCliked} funcOffModal={()=>setModalToCard(false)}/>
      </S.ContainerModal>
      }
  { isLogged ? <S.ContainerModal>

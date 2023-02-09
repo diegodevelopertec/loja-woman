@@ -86,7 +86,7 @@ const setData=()=>{
                             <button className='btn-add' onClick={actionsModal.addQdtProduct}> + </button>
                         </div>
                     </div>
-                    <p>Você está adicionando <span className='qdt-modal'>{qdtProduct} {qdtProduct === 1 ? data.category.replace('s','') : data.category}</span></p>
+                    <p>Você está adicionando <span className='qdt-modal'>{qdtProduct } {qdtProduct === 1 && data.category !== 'Blusas'  ? data.category.replace('s','') : data.category}</span></p>
                </div>
                <div className="cx-buttons">
                         <button className='btn-cancel' onClick={funcOffModal}>voltar</button>

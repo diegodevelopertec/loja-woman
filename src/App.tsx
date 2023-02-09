@@ -6,6 +6,9 @@ import { ButtonMenu } from './Components/ButtonMenu'
 import UserIcon from '.././src/assets/imgs/user.png'
 import LojaIcon from '.././src/assets/imgs/lojaicon.png'
 import ComprasIcon from '././assets/imgs/comprasIcon.png'
+import ZapIcon from  './../public/imgs/zap.png'
+import InstaIcon from  './../public/imgs/insta.png'
+import FaceIcon from  './../public/imgs/face.png'
 
 
 const App=()=>{
@@ -41,8 +44,15 @@ const App=()=>{
               <div className="logo">
                 <span>laddyMODAS</span>
               </div>
+              <div className='cx-icons-media'>
+                  <span>Se conecte com a gente : </span>
+                 <a href=""> <img src={FaceIcon} /></a>
+                 <a href=""> <img src={InstaIcon} /></a>
+                 <a href=""> <img src={ZapIcon} /></a>
+                </div>
              
             </S.CardLoja>
+          
           </S.HeaderApp>
           <Routes/>
          <ToastContainer />
