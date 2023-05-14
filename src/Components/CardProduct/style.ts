@@ -6,8 +6,8 @@ export const Container=styled.div`
   
     box-shadow:0 0 4px #141413;
     margin:12px 0;
-    border-radius:6px;
-    background: #ebedf0;
+    border-radius:4px;
+    background:#dedede;
     @media screen and (max-width:600px){
     font-size:10px;
      

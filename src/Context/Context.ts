@@ -12,6 +12,8 @@ type ContextTypeState={
     products:Product[],
     requests:RequestType,
     address:AddressType[],
+    //openMenuMobile:boolean,
+    //setOpenMenuMobile:(state:boolean)=>void
     
    
 }
@@ -26,7 +28,7 @@ export const initialStateContext={
     products:initialStateProductBad,
     requests:initialStateRequest,
     address:initialStateAddress,
-   
+  
  
    
 }

@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import BgImage from '.././src/assets/imgs/bg.jpg'
 
 export const ThemeStyle={
-    bgTheme:'#805799',
-     bgAppSystem:'#af9eba',
+     bgTheme:'#764296',
+     bgAppSystem:'#FFFF',
     bgCardProductBottom:'#2f302f' ,
     colorTitleCard: 'black',
     colorIngredientsCategory:' #aaa',
@@ -29,6 +29,7 @@ export const LeftContent=styled.div`
     display: flex;
     justify-content:center;
     align-items:center;
+    
     @media screen  and (max-width:950px){
         position:fixed;
         z-index:1;
@@ -43,6 +44,10 @@ export const LeftContent=styled.div`
         border-top-right-radius:17px;
    }
  
+
+ @media screen and (max-width:950px){
+    display: none;
+ }
 `
 
 export const HeaderApp=styled.header`
@@ -91,6 +96,7 @@ export const CardLoja=styled.div`
         flex-direction:column;
         padding: 10px 0;
         margin:40px 15px;
+        display: none;
 
         .logo{
             font-size: 49px;

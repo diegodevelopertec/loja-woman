@@ -1,4 +1,4 @@
-import { ReactNode, useState ,createContext } from "react";
+import { ReactNode, useState ,createContext, useContext } from "react";
 import { UserType } from "../Types/UserType";
 
 type Props={
@@ -14,8 +14,6 @@ type stateModalType={
 
 export const modalLoginContext=createContext<stateModalType >(null!)
 
-
-
 export const ModalLoginProvider=({children}:Props)=>{
     let [stateModal,handleStateModal]=useState(false)
   
@@ -24,3 +22,6 @@ return <modalLoginContext.Provider value={{stateModal,handleStateModal}}>
 </modalLoginContext.Provider>
 
 }
+
+
+export const useMenuMobile=()=>useContext(modalLoginContext)

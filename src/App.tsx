@@ -9,7 +9,7 @@ import ComprasIcon from '././assets/imgs/comprasIcon.png'
 import ZapIcon from  './../public/imgs/zap.png'
 import InstaIcon from  './../public/imgs/insta.png'
 import FaceIcon from  './../public/imgs/face.png'
-
+import { HeaderTopMobile } from './HeaderTopMobile';
 
 const App=()=>{
 
@@ -39,6 +39,7 @@ const App=()=>{
         </S.LeftContent>
 
         <S.RightContent>
+        <HeaderTopMobile />
           <S.HeaderApp>
             <S.CardLoja>
               <div className="logo">

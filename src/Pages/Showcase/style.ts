@@ -56,6 +56,7 @@ export const CategorySectionProducts=styled.div`
     @media screen and (max-width:950px){
         justify-content:center;
         text-align:center;
+        margin-top: 160px;
         .cx-btn-icons{
             justify-content:center;
             margin: 0;
@@ -74,16 +75,18 @@ export const ShowcaseProduct=styled.div<Props>`
     display: ${props=>props.stateDisplay === false ? 'grid' : 'block'};
     grid-template-columns:repeat(4,1fr);
     gap:10px;
+    width: 100%;
     transition: all ease 0.2;
     padding-bottom:50px;
-    padding: 30px 10px;
+    padding: 30px 18px;
     margin-bottom:90px;
     background-color:${ThemeStyle.bgAppSystem};
     @media screen and (max-width:920px){
       grid-template-columns:repeat(2,1fr);
-    justify-content:center;
-    align-items:center;
-      padding-bottom:50px;
+      justify-content:center;
+       align-items:center;
+      padding: 30px 6px;
+       padding-bottom:50px;
    
     }
 `
