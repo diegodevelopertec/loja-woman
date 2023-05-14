@@ -1,4 +1,4 @@
-import * as S from './style'
+import { Box, BoxShopping } from './style'
 import { Requests } from '../../Components/Requests'
 import { useContextApp } from '../../hooks/useContextApp'
 import ErrorIcon from './../../assets/imgs/erroricon.png'
@@ -27,42 +27,26 @@ const FilterRequestsDelivered=state.requests.filter(item=>item.state === 'entreg
 
 useEffect(()=>{
   localStorage.setItem('requestsHistory',JSON.stringify(FilterRequestsDelivered))
-  
   console.log(requestsHistory);
-
 },[state.requests])
 
 
 
 
-    return <S.Container>
-       <div className="intro">
-                <h3>Histórico de Pedidos</h3>
-                <p>Bem vindo {userStorage?.name}<br/>Confira aqui os estado dos seus pedidos:</p> 
-              </div>
-         {userStorage !== null && FilterRequestsDelivered.length > 0 ? <>
-             
-              <div className="requests-container">
-                {FilterRequestsPending.map((item,index)=>(
-                    <Requests dataRequests={item} key={index} />
-                ))}
+    return <Box>
+        <h3>Compras</h3>
+        <BoxShopping>
+          {
+            FilterRequestsDelivered.length > 0 ?   FilterRequestsDelivered.map((i,k)=>(
+              <Requests dataRequests={i} key={k} />
+            )) : <div className='error-request'>
+                <p>Nenhuma compra feita</p>
+            </div>
+          }
+      
 
-              </div>
-              <div className="requests-delivered-cx">
-                  <h4>Entregues</h4>
-                  {
-                   FilterRequestsDelivered.map((item,index)=>(
-                      <Requests dataRequests={item} key={index} />
-                    ))
-                  }
-              </div>
-         </> :
-         <div className='error-requests'>
-        <p>Nenhum pedido feito</p>
-        <img src={ErrorIcon} alt="" />
-        
-        </div>}
+        </BoxShopping>
 
 
-    </S.Container>
+    </Box>
 }

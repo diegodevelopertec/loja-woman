@@ -36,7 +36,7 @@ export const HeaderTopMobile=()=>{
                     <div className="nav-links">
                         <Link to='/' onClick={()=> handleStateMenuMobile(false)} >Inicio</Link>
                         <Link to='/compras' onClick={()=> handleStateMenuMobile(false)} >Produtos</Link>
-                        <Link to='/sobre' onClick={()=> handleStateMenuMobile(false)}  >Carrinho</Link>
+                        <Link to='/cart' onClick={()=> handleStateMenuMobile(false)}  >Carrinho</Link>
                         <Link to='/sobre' onClick={()=> handleStateMenuMobile(false)}  >Compras</Link>
                         <Link to='/conta' onClick={()=> handleStateMenuMobile(false)}  >Conta</Link>
                         <Link to='/sobre' onClick={()=> handleStateMenuMobile(false)}  >Sobre</Link>

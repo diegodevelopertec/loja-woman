@@ -6,10 +6,11 @@ import { ButtonMenu } from './Components/ButtonMenu'
 import UserIcon from '.././src/assets/imgs/user.png'
 import LojaIcon from '.././src/assets/imgs/lojaicon.png'
 import ComprasIcon from '././assets/imgs/comprasIcon.png'
-import ZapIcon from  './../public/imgs/zap.png'
-import InstaIcon from  './../public/imgs/insta.png'
-import FaceIcon from  './../public/imgs/face.png'
 import { HeaderTopMobile } from './HeaderTopMobile';
+import CartIcon from '.././src/assets/imgs/cart.png'
+import InterIcon from  './../public/imgs/intericon.png'
+
+
 
 const App=()=>{
 
@@ -21,38 +22,43 @@ const App=()=>{
                   link={'/'}  
                   marginhorizontal='10' 
                   text='inicio'
-                  marginvertical='10' />
+                  marginvertical='10' 
+              />
+              <ButtonMenu 
+                    link={'/cart'}  
+                    src={CartIcon} 
+                    marginhorizontal='10' 
+                    marginvertical='10' 
+                    text='compras'
+              />
               <ButtonMenu 
                   link={'/compras'}  
                   src={ComprasIcon} 
                   marginhorizontal='10' 
                   marginvertical='10' 
-                  text='compras'/>
-                    
+                  text='compras'
+              />
               <ButtonMenu  
                  src={UserIcon} 
                  link={'/user' }
                  marginhorizontal='10' 
                  marginvertical='10' 
-                 text='conta'/>
+                 text='conta'
+            />
+             <ButtonMenu  
+                 src={InterIcon} 
+                 link={'/sobre' }
+                 marginhorizontal='10' 
+                 marginvertical='10' 
+                 text='conta'
+            />
             </S.Menu>
         </S.LeftContent>
 
         <S.RightContent>
         <HeaderTopMobile />
           <S.HeaderApp>
-            <S.CardLoja>
-              <div className="logo">
-                <span>laddyMODAS</span>
-              </div>
-              <div className='cx-icons-media'>
-                  <span>Se conecte com a gente : </span>
-                 <a href=""> <img src={FaceIcon} /></a>
-                 <a href=""> <img src={InstaIcon} /></a>
-                 <a href=""> <img src={ZapIcon} /></a>
-                </div>
-             
-            </S.CardLoja>
+          
           
           </S.HeaderApp>
           <Routes/>

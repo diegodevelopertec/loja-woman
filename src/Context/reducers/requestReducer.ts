@@ -23,7 +23,9 @@ export const useRequestReducer=(state:RequestType , action:ActionTypeGeral)=>{
                 stateProducts=stateProducts.filter(item=>item.id !== data.id)
                 toast.success('removido do historico')
                 return stateProducts
-            }        
+            }   
+            
+            
     }
     return state
 }

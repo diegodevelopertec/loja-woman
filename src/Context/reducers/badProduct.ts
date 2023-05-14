@@ -29,6 +29,7 @@ export const useProductBadReducer=(state:Product[] ,action:ActionTypeGeral)=>{
            
             
         }
+       
         case 'changeProducts':{
             let indexItem=listProducts.findIndex(item=>item.id === action.payload?.key)
            let data=listProducts[indexItem]

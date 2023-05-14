@@ -7,9 +7,7 @@ import { ButtonMenuCategory } from "../../Components/ButtonMenuCategory"
 import { CardCliked } from "../../Components/CardProductCliked"
 import { dataShorts } from "../../data/Product"
 import { dataIntima } from "../../data/Product"
-import {Cart } from "../../Components/Cart"
 import { ThemeStyle } from "../../../styled"
-import { LoginModal } from "../LoginModal"
 import { useContextApp } from "../../hooks/useContextApp"
 import { BannerPromotions } from "../../Components/BannerPromotions"
 import { useModalLogin } from "../../hooks/useModeLogin"
@@ -19,6 +17,9 @@ import  womanBannerMain from './../../../public/imgs/bannerImage.png'
 import BlusaIcon from  './../../../public/imgs/blusasicon.png'
 import CalcinhaIcon from  './../../../public/imgs/calcinhaicon.png'
 import ShortsIcon from  './../../../public/imgs/jeans.png'
+import ZapIcon from  './../../../public/imgs/zap.png'
+import InstaIcon from  './../../../public/imgs/insta.png'
+import FaceIcon from  './../../../public/imgs/face.png'
 
 export const Showcase=()=>{
    
@@ -89,7 +90,17 @@ export const Showcase=()=>{
   
 return <S.Container>
        
-     
+       <S.CardLoja>
+              <div className="logo">
+                <span>laddyMODAS</span>
+              </div>
+              <div className='cx-icons-media'>
+                  <span>Se conecte com a gente : </span>
+                 <a href=""> <img src={FaceIcon} /></a>
+                 <a href=""> <img src={InstaIcon} /></a>
+                 <a href=""> <img src={ZapIcon} /></a>
+                </div>
+            </S.CardLoja>
      
     {  <S.ContainerCaseLogged className="cx-logado">
                 <div className="area-img">
@@ -151,8 +162,6 @@ return <S.Container>
         { displayBlouses ? blousesProductList && blousesProductList.map((item,index)=>< CardProduct  key={index} onClick={returnDataClikedProduct} data={item} />) : null}
         { displayShorts? shortsProductList && shortsProductList.map((item,index)=>< CardProduct  key={index} onClick={returnDataClikedProduct}  data={item} />) : null}
         { displayPanties ? pantiesProductList && pantiesProductList.map((item,index)=>< CardProduct  key={index} onClick={returnDataClikedProduct}  data={item} />) : null}
-       
-        <Cart />
        </>
      
     </S.ShowcaseProduct>
@@ -161,10 +170,7 @@ return <S.Container>
         <CardCliked   data={dataProductCliked} funcOffModal={()=>setModalToCard(false)}/>
      </S.ContainerModal>
      }
- { isLogged ? <S.ContainerModal>
-          <LoginModal closeModal={()=>handleStateModal(false)} />
-     </S.ContainerModal> :null
-}
+
    
     
    
