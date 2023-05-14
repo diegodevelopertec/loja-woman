@@ -2,13 +2,13 @@ import { Box, BoxShopping } from './style'
 import { Requests } from '../../Components/Requests'
 import { useContextApp } from '../../hooks/useContextApp'
 import ErrorIcon from './../../assets/imgs/erroricon.png'
-import {useAuthContext} from './../../hooks/useContextAuth'
+import {useAuthContext} from '../../hooks/useContextAuth'
 import { useEffect, useState } from 'react'
 import { RequestType } from '../../Types/RequestType'
 import { UserType } from '../../Types/UserType'
 
 
-export const DeliveryPage=()=>{
+export const ShoppingPage=()=>{
  
  
   const {state,dispatch}=useContextApp()

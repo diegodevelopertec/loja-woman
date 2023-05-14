@@ -3,15 +3,19 @@ import { ThemeStyle } from "../../../styled";
 import { theme } from "antd";
 
 export const Box=styled.div`
-margin: 50px 20px;
+padding: 50px;
+margin: 50px 0;
+
 h3{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     color: ${ThemeStyle.bgTheme};
 }
 
-
-
+@media screen  and (max-width:950px){
+    padding:140px 6px;
+    margin: 0;
+}
 `
 
 export const BoxShopping=styled.div`

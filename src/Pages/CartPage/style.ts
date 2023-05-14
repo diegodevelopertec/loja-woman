@@ -9,7 +9,8 @@ margin: 50px 0;
 
 
 @media screen  and (max-width:950px){
-    padding:150px 6px;
+    padding:140px 6px;
+    margin: 0;
 }
 
 
