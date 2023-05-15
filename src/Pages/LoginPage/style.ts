@@ -41,6 +41,7 @@ export const BoxLogin=styled.div`
     }
     h3{
         color: ${ThemeStyle.bgTheme};
+        font-size: 25px;
     }
 
     @media screen and (max-width:750px) {

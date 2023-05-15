@@ -29,22 +29,6 @@ export const LeftContent=styled.div`
     display: flex;
     justify-content:center;
     align-items:center;
-    
-    @media screen  and (max-width:950px){
-        position:fixed;
-        z-index:1;
-        bottom:0;
-        top: 90;
-        left:0;
-        right:0;
-        width: 100%;
-        box-shadow:0 0 5px #aaa;
-        padding: 7px 0;
-        border-top-left-radius:17px;
-        border-top-right-radius:17px;
-   }
- 
-
  @media screen and (max-width:950px){
     display: none;
  }

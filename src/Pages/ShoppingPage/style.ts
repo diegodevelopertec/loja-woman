@@ -7,9 +7,10 @@ padding: 50px;
 margin: 50px 0;
 
 h3{
-    font-size: 25px;
+    font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    color: ${ThemeStyle.bgTheme};
+    color: #212121;
+    text-shadow: 0 0 5px #9fa19f;
 }
 
 @media screen  and (max-width:950px){
@@ -26,12 +27,15 @@ margin: 50px 0;
 
 
 .error-request{
+    font-size: 22px;
+    margin: 30px 0;
     padding: 15px;
-    font-size: 18px;
-    color: #D8CACA;
     p{
-        padding: 15px;
-        width:90%;
+       margin-left: 5px;
+       color: #817f85;
+       width: auto;
+       border: 2px dashed #817f85;
+       padding: 15px;
       
     }
 }

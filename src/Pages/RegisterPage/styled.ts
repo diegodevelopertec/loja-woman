@@ -5,6 +5,7 @@ import { ThemeStyle } from "../../../styled";
 export const Box=styled.div`
         display: flex;
         padding:80px 20px;
+        margin-bottom: 50px;
     @media screen and (max-width:950px) {
         padding: 160px 6px;
     }
@@ -16,7 +17,9 @@ width: 100%;
 height: 100vh;
 h3{
     font-size: 25px;
-    color: ${ThemeStyle.bgTheme};
+    font-size: 30px;
+    color: #212121;
+    text-shadow: 0 0 5px #9fa19f;
 }
 p{
     margin-top: 10px;

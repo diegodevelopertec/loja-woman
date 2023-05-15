@@ -4,12 +4,12 @@ import {ThemeStyle} from '../../../styled'
 
 export const Container=styled.div`
   
-    box-shadow:0 0 4px #141413;
+    box-shadow:0 0 6px #141413;
     margin:12px 0;
     border-radius:4px;
-    background:#dedede;
+    background-color:#daebdf;
     @media screen and (max-width:600px){
-    font-size:10px;
+      font-size:10px;
      
     }
    
@@ -17,7 +17,6 @@ export const Container=styled.div`
 
 export const  ContainerImage=styled.div`
   
-   background: white;
     height: auto;
     display: flex;
     justify-content:center;
@@ -47,11 +46,11 @@ export const DataProduct=styled.div`
     padding: 18px 10px;
     margin-top:12px;
     flex-direction:column;
-
+    background-color:#daebdf;
         .info-product{
             margin: 15px 0;
             height: 100px;
-           
+            background-color:#daebdf;
             .category--name{
                     color: ${ThemeStyle.colorIngredientsCategory};
                     padding: 5px 0;

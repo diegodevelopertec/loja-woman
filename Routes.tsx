@@ -5,6 +5,7 @@ import { AccountPage } from './src/Pages/AccountPage'
 import { CartPage } from './src/Pages/CartPage'
 import { LoginPage } from './src/Pages/LoginPage'
 import { RegisterPage } from './src/Pages/RegisterPage'
+import { AboutShopping } from './src/Pages/AboutShopping'
 
 
 
@@ -17,6 +18,7 @@ export const Routes=()=>{
              <Route path='/compras'  element={<ShoppingPage />} />
              <Route path='/cart'  element={<CartPage/>} />
              <Route path='/user'  element={<AccountPage/>} />
+             <Route path='/sobre'  element={<AboutShopping />} />
              <Route path='/login'  element={<LoginPage />} />
              <Route path='/register'  element={<RegisterPage />} />
           </Rotas>

@@ -6,13 +6,12 @@ export const Container=styled.div`
     width:770px;
     box-shadow:0 0 15px #141413;
     border-radius:6px;
- 
     background: ${ThemeStyle.bgCardProductBottom};
  
 
-   @media screen and (max-width:680px){
+   @media screen and (max-width:780px){
         position: absolute;
-    
+        background-color:#FFF;
         top:0;
         left:0;
         bottom: 0;
@@ -50,18 +49,19 @@ export const ContainerImage=styled.div`
         border-bottom-left-radius:6px;
        
     }
-        @media screen and (max-width:680px){
+        @media screen and (max-width:780px){
             width: 100vw;
-            padding: 10px;
             display: flex;
             justify-content:center;
             align-items:center;
-            border: 0;
+            border-top-left-radius:0;
+           border-bottom-left-radius:0;
+            margin-bottom: 12px;
          
             img{
-                width: 55vw;
-                border-radius:5px;
-               height: 35vh;
+                width: 65vw;
+                height: 40vh;
+                border-radius: 0;
             }
            
         }
@@ -111,9 +111,7 @@ export const ContainerData=styled.div`
         padding: 12px 0;
         color: ${ThemeStyle.bgTheme};
         font-size:2rem;
-     
-        
-            
+   
     }
  }
 
@@ -209,8 +207,8 @@ export const ContainerData=styled.div`
 
   
 
-@media screen and (max-width:600px){
-    
+@media screen and (max-width:780px){
+    background-color:#FFF;
    .cx-qdt{
         align-items:center;
         text-align:center;
@@ -219,16 +217,13 @@ export const ContainerData=styled.div`
     .cx-price{
         display: family;
         justify-content:center;
-        
+        align-items: center;
+        padding: 0;
+        height: 55px;
+        font-size: 20px;
+        background-color: #c4c4c2;
     }
-    .price-modal{
-        text-align:center;
-        margin: 20px 0;
-        padding: 12px 5px;
-        border-radius:5px;
-        width:70vw;
-        
-    }
+    
     
 }
 

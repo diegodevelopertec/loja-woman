@@ -22,7 +22,8 @@ h3{
     margin-left: 20px;
     font-weight: 700;
     font-size: 30px;
-    color: #371f6b;
+    color: #212121;
+    text-shadow: 0 0 5px #9fa19f;
 }
 
 `
@@ -34,11 +35,14 @@ margin-bottom: 90px;
 .error-cart{
     font-size: 22px;
     margin: 30px 0;
-    color: #817f85;
     padding: 15px;
     p{
-        padding: 15px;
-        border: 2px dotted ${ThemeStyle.bgTheme};
+       margin-left: 5px;
+       color: #817f85;
+       width: auto;
+       border: 2px dashed #817f85;
+       padding: 15px;
+      
     }
 
 }
