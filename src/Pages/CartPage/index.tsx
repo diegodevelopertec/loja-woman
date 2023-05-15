@@ -33,24 +33,17 @@ export const CartPage=()=>{
             address: address,
             totalValueProduct:total
         }
-    
-        if(user === null){
-            handleStateModal(true)
-           
-            
-        }else{
-            dispatch({   
-                type:'setDataToRequest',
-                payload:{data}
-            })
-           
-        
-            
+            dispatch({   type:'setDataToRequest', payload:{data}})
            state.products=[]
            navigate('/compras')
         }
-     }
+     
 
+
+
+     const ClearCart=()=>{
+        dispatch({type:'clearListProducts'})
+     }
 
 
     return <Box>
@@ -82,7 +75,7 @@ export const CartPage=()=>{
         </BoxDataCart> 
         </BoxCart>
         <BoxButtons>
-            <button className="cancel">Limpar Carrinho</button>
+            <button className="cancel" onClick={()=>ClearCart()}>Limpar Carrinho</button>
             <button className="finalize" onClick={()=>setDataToRequests()}>Finalizar Compra</button>
         </BoxButtons>
     </Box>

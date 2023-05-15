@@ -32,10 +32,10 @@ export const BoxForm=styled.div`
 `
 
 export const  CardInput=styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
 
 input{
     padding: 18px 9px;

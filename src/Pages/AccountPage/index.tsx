@@ -10,12 +10,13 @@ import {v4 as uuid} from 'uuid'
 import { useModalLogin } from '../../hooks/useModeLogin';
 import { Navigate, redirect, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import LapisIcon from './../../assets/imgs/lapis.png'
-import LixeiraIcon from './../../assets/imgs/lixeira.png'
-import SaveIcon from './../../assets/imgs/save.png'
-import { Box,FormBox } from './style';
+import { Box,BoxDataAccount,BoxDataPay,BoxDataAddress } from './style';
+import LoginIcon from '/public/imgs/login.png'
+import PayIcon from '/public/imgs/pay.png'
+import AddressIcon from '/public/imgs/address.png'
+import { FormDataAccount } from '../../Components/FormDataAccount';
 
-
+//#DFDCDC
 
 type InputTypes={
     name:string,
@@ -37,10 +38,18 @@ export const AccountPage=()=>{
 
     return <Box>
         <h3>Seus Dados</h3>
-        <FormBox>
-           
+        <BoxDataAccount>
+           <h3><img src={LoginIcon} alt="" />Dados de Login/Usuário</h3>
+           <FormDataAccount />
+        </BoxDataAccount>
+        <BoxDataPay>
+           <h3><img src={PayIcon} alt="" />Dados de Pagamento</h3>
 
-        </FormBox>
+        </BoxDataPay>
+        <BoxDataAddress>
+           <h3><img src={AddressIcon} alt="" />Dados de Endereço</h3>
+
+        </BoxDataAddress>
     </Box>
   
 }
