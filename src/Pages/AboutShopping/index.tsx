@@ -3,7 +3,7 @@ import { Box,BoxContext, BoxImageDescription,BoxDoubts} from "./style"
 
 export const AboutShopping=()=>{
     return <Box>    
-        <h3>Sobre a Loja</h3>
+        <h3>Sobre a LaddyModas</h3>
        <BoxContext>
         <BoxImageDescription>
             <div className="cx-image">

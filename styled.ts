@@ -62,6 +62,8 @@ export const RightContent=styled.div`
     flex: 1;
     background-color:${ThemeStyle.bgAppSystem};
     overflow-y:auto;
+    padding: 0;
+    margin: 0;
     ::-webkit-scrollbar{
         width: 8px;
       }

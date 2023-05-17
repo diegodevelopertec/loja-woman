@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { useMenuMobile } from "../Context/menuMobileContext"
+import { useMenuMobile } from "../../Context/menuMobileContext"
 import { Box, BoxLeft, BoxRight } from "./style"
 import {Link, useNavigate} from "react-router-dom"
-import IconMenuMobile from './../../public/imgs/iconmenu.png'
-import CloseMobile from './../../public/imgs/closemenu.png'
+import IconMenuMobile from './../../../public/imgs/iconmenu.png'
+import CloseMobile from './../../../public/imgs/closemenu.png'
 
 export const HeaderTopMobile=()=>{
    const {stateMenuMobile,handleStateMenuMobile}=useMenuMobile()
@@ -37,7 +37,7 @@ export const HeaderTopMobile=()=>{
                         <Link to='/' onClick={()=> handleStateMenuMobile(false)} >Inicio</Link>
                         <Link to='/cart' onClick={()=> handleStateMenuMobile(false)}  >Carrinho</Link>
                         <Link to='/compras' onClick={()=> handleStateMenuMobile(false)}  >Compras</Link>
-                        <Link to='/conta' onClick={()=> handleStateMenuMobile(false)}  >Conta</Link>
+                        <Link to='/user' onClick={()=> handleStateMenuMobile(false)}  >Conta</Link>
                         <Link to='/sobre' onClick={()=> handleStateMenuMobile(false)}  >Sobre</Link>
                     </div>
 

@@ -7,7 +7,7 @@ export const Container=styled.div`
     box-shadow:0 0 6px #141413;
     margin:12px 0;
     border-radius:4px;
-    background-color:#daebdf;
+    background-color:#e1e8e3;
     @media screen and (max-width:600px){
       font-size:10px;
      
@@ -31,8 +31,8 @@ export const  ContainerImage=styled.div`
     border-top-right-radius:6px;
       
         @media screen and (max-width:600px){
-         height: 180px;
-     
+          height: 180px;
+         
        }
     }
 
@@ -46,11 +46,11 @@ export const DataProduct=styled.div`
     padding: 18px 10px;
     margin-top:12px;
     flex-direction:column;
-    background-color:#daebdf;
+    background-color:#e1e8e3;
         .info-product{
             margin: 15px 0;
             height: 100px;
-            background-color:#daebdf;
+            background-color:#e1e8e3;
             .category--name{
                     color: ${ThemeStyle.colorIngredientsCategory};
                     padding: 5px 0;

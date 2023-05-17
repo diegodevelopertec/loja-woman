@@ -99,7 +99,8 @@ nav {
         justify-content: center;
         a{
           margin: 12px;
-           transition: all ease .1s;
+          color: #530f87;
+          transition: all ease .1s;
           text-decoration: none;
         }
     }

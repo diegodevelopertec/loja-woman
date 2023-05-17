@@ -3,8 +3,8 @@ import { ThemeStyle } from "../../../styled";
 import { theme } from "antd";
 
 export const Box=styled.div`
-padding: 50px;
-margin: 50px 0;
+    padding: 50px;
+    margin: 50px 0;
 
 h3{
     font-size: 30px;

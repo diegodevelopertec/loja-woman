@@ -15,8 +15,8 @@ import LoginIcon from '/public/imgs/login.png'
 import PayIcon from '/public/imgs/pay.png'
 import AddressIcon from '/public/imgs/address.png'
 import { FormDataAccount } from '../../Components/FormDataAccount';
-
-//#DFDCDC
+import { FormDataAddress } from '../../Components/FormDataAddress';
+import { FormDataPayments } from '../../Components/FormDataPayments';
 
 type InputTypes={
     name:string,
@@ -44,11 +44,11 @@ export const AccountPage=()=>{
         </BoxDataAccount>
         <BoxDataPay>
            <h3><img src={PayIcon} alt="" />Dados de Pagamento</h3>
-
+           <FormDataPayments />
         </BoxDataPay>
         <BoxDataAddress>
            <h3><img src={AddressIcon} alt="" />Dados de Endereço</h3>
-
+           <FormDataAddress />
         </BoxDataAddress>
     </Box>
   

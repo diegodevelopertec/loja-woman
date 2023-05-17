@@ -72,11 +72,6 @@ export const Showcase=()=>{
    
     }
 
-
- 
-   
- 
-
     const conditionCategoryTitle=()=>{
         if(displayBlouses){
             return 'Blusas'
@@ -92,7 +87,7 @@ return <S.Container>
        
        <S.CardLoja>
               <div className="logo">
-                <span>laddyMODAS</span>
+                <span>LaddyModas</span>
               </div>
               <div className='cx-icons-media'>
                   <span>Se conecte com a gente : </span>
@@ -116,9 +111,7 @@ return <S.Container>
                                 <span>Pediu</span>
                                 <span>Logou</span>
                                 <span>Chegou</span>  
-                        </div>
-                  
-                       
+                        </div>  
                 </div>
      </S.ContainerCaseLogged>
      }

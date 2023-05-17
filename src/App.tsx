@@ -6,7 +6,7 @@ import { ButtonMenu } from './Components/ButtonMenu'
 import UserIcon from '.././src/assets/imgs/user.png'
 import LojaIcon from '.././src/assets/imgs/lojaicon.png'
 import ComprasIcon from '././assets/imgs/comprasIcon.png'
-import { HeaderTopMobile } from './HeaderTopMobile';
+import { HeaderTopMobile } from './Components/HeaderTopMobile';
 import CartIcon from '.././src/assets/imgs/cart.png'
 import InterIcon from  './../public/imgs/intericon.png'
 
@@ -56,13 +56,9 @@ const App=()=>{
         </S.LeftContent>
 
         <S.RightContent>
-        <HeaderTopMobile />
-          <S.HeaderApp>
-          
-          
-          </S.HeaderApp>
-          <Routes/>
-         <ToastContainer />
+          <HeaderTopMobile />
+            <Routes/>
+          <ToastContainer />
         </S.RightContent>
   </S.Body>
 }

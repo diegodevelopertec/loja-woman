@@ -62,8 +62,7 @@ export const CategorySectionProducts=styled.div`
             margin: 0;
         }
         .category-title{
-       
-        justify-content:center;
+           justify-content:center;
     }
 }
 
@@ -83,9 +82,8 @@ export const ShowcaseProduct=styled.div<Props>`
     background-color:${ThemeStyle.bgAppSystem};
     @media screen and (max-width:920px){
       grid-template-columns:repeat(2,1fr);
-      justify-content:center;
        align-items:center;
-      padding: 30px 6px;
+        padding: 30px 6px;
        padding-bottom:50px;
    
     }
@@ -196,6 +194,7 @@ export const CardLoja=styled.div`
             display: flex;
             justify-content:center;
             align-items:center;
+            text-shadow: 0 0 5px #000;
             img{
                 height: 80px;
                 width: 80px;
@@ -207,8 +206,9 @@ export const CardLoja=styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
+          
             span{
-                color: #eee;
+              color: #232423;
                 font-size: 15px;
             }
             img{
