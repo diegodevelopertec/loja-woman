@@ -1,7 +1,47 @@
+import { CardDoubts } from "../../Components/CardDoubts"
 import { Box,BoxContext, BoxImageDescription,BoxDoubts} from "./style"
+import { useState } from "react"
+
+
+type Doubts={
+    id:string | number,
+    title:string,
+    response:string
+}
+
+let Doubts=[{
+    id:1,
+    title:'Quem Somos',
+    response:`Se um usuário estiver logado e autenticado em uma aplicação, geralmente é possível exibir informações 
+       básicas relacionadas ao seu cartão de pagamento para fornecer uma experiência personalizada. No entanto, é importante lembrar que você deve seguir as práticas de segurança e privacidade para proteger 
+       as informações confidenciais do usuário. Aqui estão algumas informações que podem ser exibidas de forma segura para um usuário autenticado:
+    `
+},{
+    id:2,
+    title:'Como funciona o pagamentos?',
+    response:`Se um usuário estiver logado e autenticado em uma aplicação, geralmente é possível exibir informações 
+       básicas relacionadas ao seu cartão de pagamento para fornecer uma experiência personalizada. No entanto, é importante lembrar que você deve seguir as práticas de segurança e privacidade para proteger 
+       as informações confidenciais do usuário. Aqui estão algumas informações que podem ser exibidas de forma segura para um usuário autenticado:
+    `
+},
+{
+    id:3,
+    title:'Como funciona a entrega?',
+    response:`Se um usuário estiver logado e autenticado em uma aplicação, geralmente é possível exibir informações 
+       básicas relacionadas ao seu cartão de pagamento para fornecer uma experiência personalizada. No entanto, é importante lembrar que você deve seguir as práticas de segurança e privacidade para proteger 
+       as informações confidenciais do usuário. Aqui estão algumas informações que podem ser exibidas de forma segura para um usuário autenticado:
+    `
+}]
+
+
 
 
 export const AboutShopping=()=>{
+    const [doubts,setdoubts]=useState<Doubts[] |[]>(Doubts)
+
+
+
+
     return <Box>    
         <h3>Sobre a LaddyModas</h3>
        <BoxContext>
@@ -28,6 +68,11 @@ export const AboutShopping=()=>{
         </BoxImageDescription>
         <BoxDoubts>
             <h4>Dúvidas Frequentes</h4>
+            {
+              doubts.map((i,k)=>(
+                <CardDoubts  doubts={i} key={k}/>
+              ))
+            }
         </BoxDoubts>
        </BoxContext>
     </Box>

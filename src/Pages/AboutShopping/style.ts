@@ -5,7 +5,7 @@ import { theme } from "antd";
 export const Box=styled.div`
 margin: 50px 0;
 width: auto;
-height: 1200px;
+margin-bottom: 160px;
     h3{
         padding: 50px;
         font-size: 30px;
@@ -20,6 +20,7 @@ height: 1200px;
         padding: 20px 0;
     }
     margin: 0;
+    margin-bottom: 60px;
 }
 `
 
