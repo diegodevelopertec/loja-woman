@@ -9,7 +9,6 @@ import { dataShorts } from "../../data/Product"
 import { dataIntima } from "../../data/Product"
 import { ThemeStyle } from "../../../styled"
 import { useContextApp } from "../../hooks/useContextApp"
-import { BannerPromotions } from "../../Components/BannerPromotions"
 import { useAuthContext } from "../../hooks/useContextAuth"
 import  womanBurguer from './../../assets/imgs/banner_main_rf.png'
 import  womanBannerMain from './../../../public/imgs/bannerImage.png'
