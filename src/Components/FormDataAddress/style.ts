@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ThemeStyle } from "../../../styled";
 
 type Props={
     state:boolean;
@@ -10,6 +11,28 @@ export const Box=styled.div`
 width: auto;
 margin: 35px 0;
 
+
+.new-address{
+    font-size: 18px;
+    margin: 35px 0;
+    color: #424242;
+    
+    hr{
+        margin: 12px 0;
+    }
+    button{
+        margin-left: 6px;
+        height: 45px;
+        width: 45px;
+        background-color: #777378;
+        color: #FFF;
+        border-radius: 100%;
+        border: none;
+        font-size: 25px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
 `
 
 export const BoxCardInputs=styled.div`
@@ -79,7 +102,7 @@ button{
     display: flex;
     width: 100%;
     justify-content: center;
-    
+    margin: 25px 0;
     .edit{
         background-color:#20638c;
         &:hover{
@@ -93,4 +116,17 @@ button{
         }
     }
 }
+`
+
+export const AddressDelete=styled.div`
+button{
+    border: none;
+    transition: all ease .2s;
+    background-color: transparent;
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
 `

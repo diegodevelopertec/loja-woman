@@ -3,7 +3,6 @@ import React, { useState } from "react"
 import LapisIcon from './../../assets/imgs/lapis.png'
 import LixeiraIcon from './../../assets/imgs/lixeira.png'
 import SaveIcon from './../../assets/imgs/save.png'
-import { Button, Divider } from "antd"
 import { CardPayments } from "../CardPayments"
 
 

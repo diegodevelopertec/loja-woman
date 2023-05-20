@@ -26,6 +26,8 @@ type registerType={
 type AuthType={
     user:UserType | null,
     address:AddressType | null,
+    setAddress:(address:AddressType)=>void,
+    ClearAddress:()=>void,
     requestsHistory:RequestType | [],
     LoginAuth:(email:string,password:string)=>boolean,
     registerUser:(data:registerType)=>any,
@@ -119,7 +121,11 @@ const updateUser=(data:registerType)=>{
 
 
 
-return <AuthContext.Provider value={{requestsHistory, address,LoginAuth,Logout,registerUser,user,updateUser}}>
+const  ClearAddress=()=>{
+    setAddress(null)
+}
+
+return <AuthContext.Provider value={{ClearAddress,requestsHistory,setAddress, address,LoginAuth,Logout,registerUser,user,updateUser}}>
     {children}
 </AuthContext.Provider>
 

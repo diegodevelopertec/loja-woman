@@ -82,3 +82,19 @@ h3{
     
 }
 `
+
+
+export const NotLogged=styled.div`
+margin: 20px 35px;
+
+    a{
+        margin-left: 10px;
+    }
+
+    hr{
+        margin: 12px 0;
+    }
+    @media screen and (max-width:800px){
+        margin: 20px 0;
+    }
+`

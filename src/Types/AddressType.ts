@@ -1,11 +1,10 @@
 
 export type AddressType={
-   id:number,
    rua:string,
-   cidade:string
-   estado:boolean,
+   cidadeEstado:string
    numero:string,
    bairro:string,
+   cep:string,
    logradouro:string
 }
 

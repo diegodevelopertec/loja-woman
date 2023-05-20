@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ThemeStyle } from "../../../styled";
 
 export const Box=styled.div`
-    background-color:${ThemeStyle.bgTheme};
+    background-color:'#FFFF';
     display: flex;
     justify-content: space-around;
     margin: 12px 10px;
@@ -18,7 +18,7 @@ export const Box=styled.div`
 export const BoxLeft=styled.div`
 display: grid;
 grid-template-columns: repeat(2,1fr);
-color: #FFF;
+color: #0d0c0c;
 
 @media screen and (max-width:760px) {
         display: flex;

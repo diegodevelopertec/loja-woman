@@ -8,8 +8,7 @@ import { useNavigate } from "react-router-dom"
 import { useAuthContext } from "../../hooks/useContextAuth"
 import uuid from 'uuid'
 import { ProductBad } from "../../Components/ProductBad"
-
-
+import { toast } from "react-toastify"
 
 export const CartPage=()=>{
     const {state,dispatch}=useContextApp()
@@ -25,7 +24,7 @@ export const CartPage=()=>{
       },[state.products,state.requests])
 
       const setDataToRequests=()=>{
-       if(user !== null){
+       if(user !== null || address !== null){
             let data={
                 id: '',
                 dateRequest:Date.now(),
@@ -39,8 +38,10 @@ export const CartPage=()=>{
                     state.products=[]
                     navigate('/compras')
             }
-       }else{
-        navigate('/login')
+       }else if(address === null){
+            toast.error('Cadatre um endereço');
+       } else{
+           navigate('/login')
        
        }
         }
