@@ -8,6 +8,7 @@ export const Container=styled.div`
     margin:12px 0;
     border-radius:4px;
     background-color:#e1e8e3;
+    font-family: 'Poppins', sans-serif;
     @media screen and (max-width:600px){
       font-size:10px;
      
@@ -31,7 +32,7 @@ export const  ContainerImage=styled.div`
     border-top-right-radius:6px;
       
         @media screen and (max-width:600px){
-          height: 180px;
+          height: max-content;
          
        }
     }
@@ -47,57 +48,8 @@ export const DataProduct=styled.div`
     margin-top:12px;
     flex-direction:column;
     background-color:#e1e8e3;
-        .info-product{
-            margin: 15px 0;
-            height: 100px;
-            background-color:#e1e8e3;
-            .category--name{
-                    color: ${ThemeStyle.colorIngredientsCategory};
-                    padding: 5px 0;
-                    font-size:13px;
-                    text-transform: capitalize;
-                
-                }
-                h4{
-                    font-size:13px;
-                    color: ${ThemeStyle.colorTitleCard};
-                   
-                }
-                p{
-                    color: ${ThemeStyle.colorIngredientsCategory};
-                    margin: 10px 0;
-                    font-size:1rem;
-                }
-                .price{
-                    color: ${ThemeStyle.bgTheme};
-                    font-family:Arial;
-                    font-weight:bold;
-                    width: 100px;
-                    font-size:17px;
-                }
-                .ingredientes-text{
-                    word-break:break-all;
-                    font-size:12px;
-                    margin: 6px 0;
-                    height: 20px;
-                    color: ${ThemeStyle.colorIngredientsCategory};
-                }
-
-                @media screen and (max-width:600px){
-                        font-size:1rem;
-                        flex-wrap:wrap;
-                        .ingredientes-text{
-                            display:none;
-                        }
-                    
-                }
-                
-                @media screen and (max-width:280px){
-                      height: 80px;
-                    
-                }
-    }
-
+    
+         
     .cx-btn-product{
         display:flex;
         justify-content:center;
@@ -114,6 +66,7 @@ export const DataProduct=styled.div`
             background:  ${ThemeStyle.bgTheme};
             color: white;
             border: 2px solid #d6d4d4;
+            box-shadow:  0 0 6px #000;
             border-radius:5px;
            
             &:hover{
@@ -136,4 +89,35 @@ export const DataProduct=styled.div`
       padding: 0 5px;
       width: 100%;
     }
+`
+
+export const InfoProduct=styled.div`
+
+
+span{
+    font-size: 15px;
+    
+}
+
+h4{
+    font-size: 15px;
+    height: 80px;
+    font-weight: 700;
+    text-shadow: 0 0 5px #997d95;
+}
+
+hr{
+    background-color: ${ThemeStyle.bgTheme};
+    height: 3px;
+    border-radius: 8px;
+    margin: 12px 0;
+}
+
+.price{
+    font-size: 19px;
+    margin: 20px 0;
+    font-weight: 700;
+    color: ${ThemeStyle.bgTheme};
+}
+
 `

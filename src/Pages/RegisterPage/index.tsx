@@ -1,9 +1,13 @@
-import { Box, BoxContent, BoxForm,CardInput,BoxButton,BoxFormInputs, CardInputFile, BoxBottom } from "./styled"
+import { Box, BoxContent, BoxForm,CardInput,BoxButton,BoxFormInputs, CardInputFile, BoxBottom, BoxFile } from "./styled"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from 'yup'
 import { useForm, SubmitHandler } from "react-hook-form";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { useContextApp } from "../../hooks/useContextApp";
+import { AuthContext, useAuth } from "../../Context/AuthContext";
+import { Modal } from "../../Modal";
+import { LoadingItem } from "../../Components/Loading";
+import { useModalContext } from "../../Context/modalContext";
 
 
 type InputTypes={
@@ -11,30 +15,41 @@ type InputTypes={
     password:string,
     name:string,
     phone:string;
-    CPF:string;
+    cpf:string;
+    photo?:string
+    
 }
 
 export const RegisterPage=()=>{
+    const {registerUser}=useAuth()
+    const navigate=useNavigate()
+    const {handleStateModal}=useModalContext()
 
     const schema=yup.object({
         email:yup.string().email().required(),
         password:yup.string().required().min(6, 'Senha deve ter no mínimo 6 caracteres'),
         name:yup.string().required(),
         phone:yup.string().required().matches(/^\(?\d{2}\)?[-.\s]?\d{4,5}[-.\s]?\d{4}$/, 'Telefone inválido'),
-        CPF:yup.string().required('CPF inválido').matches(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/, 'CPF inválido')
+        cpf:yup.string().required('CPF inválido').matches(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/, 'CPF inválido'),
+       
     }).required()
 
 
     const {register,handleSubmit,formState:{errors},reset}=useForm<InputTypes>({ resolver:yupResolver(schema) })
-    
-    
-    
-    const onSubmit=(data:InputTypes)=>{
-        console.log(data);
-        reset()
-        
+
+    const onSubmit:SubmitHandler<InputTypes>=(data:InputTypes)=>{
+       if(data){
+            registerUser(data) 
+            reset()
+        setTimeout(()=>{
+            handleStateModal(true)
+        },1500)
+        navigate('/')
+       }
     }
      
+
+   
 
 
 
@@ -43,13 +58,17 @@ export const RegisterPage=()=>{
 
     return <Box>
         <BoxContent>
-            <h3>Cadastro</h3>
+            <h3>Cadastro<span>|LaddyModas</span></h3>
             <p>Cadastra-se para começar a comprar</p>
             <BoxForm>
                 <form action="" onSubmit={handleSubmit(onSubmit)}>
-                     <CardInputFile>
-                                <input type="file" />
-                    </CardInputFile>
+                    <BoxFile>
+                        <CardInputFile>
+                            <span>Selecione uma foto de perfil</span>
+                            <input type="file" {...register('photo')} />
+                            <p>{errors.photo?.message}</p>
+                        </CardInputFile>
+                    </BoxFile>
                    <BoxFormInputs>
                         <CardInput>
                                 <label htmlFor="">Nome</label>
@@ -69,8 +88,8 @@ export const RegisterPage=()=>{
                         
                             <CardInput>
                                 <label htmlFor="">CPF</label>
-                                <input type="text" placeholder="Digite seu CPF"  {...register('CPF')} />
-                                <p>{errors.CPF?.message}</p>
+                                <input type="text" placeholder="Digite seu CPF"  {...register('cpf')} />
+                                <p>{errors.cpf?.message}</p>
                             </CardInput>
                             <CardInput>
                                 <label htmlFor="">Senha</label>
@@ -90,6 +109,8 @@ export const RegisterPage=()=>{
             </BoxForm>
         </BoxContent>
        
-    
+    <Modal >
+      <LoadingItem color="#5a0e75" typeLoad="spinningBubbles" mensage={"Salvando seu dados"} />
+    </Modal>
     </Box>
 }

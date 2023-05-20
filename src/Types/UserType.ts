@@ -1,10 +1,13 @@
-import { AddressType } from "./AddressType"
 
 export type UserType={
+    id?:number,
+    token?:string,
     name:string,
     email:string,
-    password:string,
-    telefone?:string
+    phone:string,
+    cpf:string,
+    password:string
+    photo?:string,
   
 
 }

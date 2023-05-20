@@ -17,13 +17,14 @@ const ClickData=()=>onClick(data)
             <img src={`${data?.imageProduct}`}/>
         </S.ContainerImage>
         <S.DataProduct>
-            <div className='info-product'>
-                <p className='category--name'>{data?.category}</p>
-                <h4>{data?.name} </h4>
-                <p className="price">
-                    R$ {data?.price.toFixed(2)}
-                </p>
-            </div>
+            <S.InfoProduct>
+                <span className='category--name'>{data?.category}</span>
+                    <h4>{data?.name} </h4>
+                    <hr />
+                    <p className="price">
+                        R$ {data?.price.toFixed(2)}
+                    </p>
+            </S.InfoProduct>
             <div className="cx-btn-product">
                <button onClick={ClickData}>detalhes</button>
             </div>

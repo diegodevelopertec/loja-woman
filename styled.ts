@@ -6,7 +6,7 @@ export const ThemeStyle={
      bgAppSystem:'#FFFF',
     bgCardProductBottom:'#2f302f' ,
     colorTitleCard: 'black',
-    colorIngredientsCategory:' #aaa',
+    colorIngredientsCategory:'#bfbfbf',
     colorTextCard: '',
     bgHoverIcon:'#8280ba',
     bgActiveIconMenu:'#6a67bf'

@@ -38,7 +38,7 @@ input{
     padding: 12px;
     font-size: 15px;
     margin-top: 6px;
-
+    
 }
 
 p{

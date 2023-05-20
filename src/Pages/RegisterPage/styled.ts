@@ -15,6 +15,9 @@ export const Box=styled.div`
 export const BoxContent=styled.div`
 width: 100%;
 height: 100vh;
+span{
+    margin-left: 5px;
+}
 h3{
     font-size: 25px;
     font-size: 30px;
@@ -65,22 +68,46 @@ p{
 
 `
 
-
-export const  CardInputFile=styled.div`
+export const BoxFile=styled.div`
 display: flex;
-flex-direction: column;
+justify-content: center;
 align-items: center;
-margin-top: 5px;
-
+`
+export const  CardInputFile=styled.div`
+width: 300px;
+height: 300px;
+background-color: #FFFF;
+margin-left: 20px;
+border: 2px dashed ${ThemeStyle.bgTheme};
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 100%;
+position: relative;
+  overflow: hidden;
+span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: #f1f1f1;
+        cursor: pointer;
+       font-family: Poppins;
+        font-style: Medium;
+        font-size: 14px;
+        line-height: 21px;
+        line-height: 150%;
+    }
 
 input{
-    padding: 18px 9px;
-    border: none;
-    background-color: #B6B6B6;
-    width:190px;
-    height: 190px;
-    border-radius: 100%;
-    box-shadow: 0 0 6px #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+     opacity: 0;
+    width: 100%;
+     height: 100%;
+     cursor: pointer;
     &:focus{
         transition: all ease .2s;
         outline: 2px solid ${ThemeStyle.bgTheme};

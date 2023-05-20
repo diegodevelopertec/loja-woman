@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ThemeStyle } from "../../../styled";
 
 type Props={
     state:boolean;
@@ -21,6 +22,7 @@ margin: 35px 0;
         margin: 12px 0;
     }
     button{
+        margin-left: 6px;
         height: 45px;
         width: 45px;
         background-color: #777378;
@@ -71,6 +73,81 @@ p{
 
 export const BoxForm=styled.div<PropsForm>`
 display: ${PropsForm=>PropsForm.display ? 'auto' : 'none'};
+
+
+`
+
+export const BoxCard=styled.div`
+display: flex;
+justify-content: center;
+margin-right: 150px;
+margin: 20px 0;
+
+
+@media screen and (max-width:780px) {
+    display: none;
+}
+
+`
+
+export const CardImage=styled.div`
+    width: 560px;
+    margin: 0 5px;
+    padding: 30px 20px ;
+    box-shadow: 0 0 5px #000;
+    background-color: ${ThemeStyle.bgTheme};
+    height: 250px;
+    border-radius: 4px;
+
+    .card-top{
+          height: 80%;
+          color: #aaa;
+        .number{
+            font-family: 'Roboto Mono', monospace;
+            font-size: 18px;
+        }     
+         .codes{
+
+            .codes-code{
+                display: flex;
+                span{
+                    font-size: 15px;
+                    margin: 0 5px;
+                }
+            }
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin:30px 25px;
+            img{
+                height: 80px;
+                width: 80px;
+            }
+         }
+    }
+    .card-bottom{
+        flex: 1;
+
+        .name-titular{
+            font-size: 18px;
+            font-family: Poppins;
+            color: #c28d11;
+            text-shadow: 0 0 5px orange;
+        }
+    }
+
+
+
+`
+
+export const CardImageVersus=styled.div`
+    width: 560px;
+    padding: 30px 20px ;
+    box-shadow: 0 0 5px #000;
+    background-color: ${ThemeStyle.bgTheme};
+    height: 250px;
+    border-radius: 4px;
+    margin: 0 5px;
 
 
 `

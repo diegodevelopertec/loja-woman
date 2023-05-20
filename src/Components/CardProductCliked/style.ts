@@ -3,7 +3,7 @@ import {ThemeStyle} from '../../../styled'
 
 export const Container=styled.div`
     display: flex;
-    width:770px;
+    width:870px;
     box-shadow:0 0 15px #141413;
     border-radius:6px;
     background: ${ThemeStyle.bgCardProductBottom};
@@ -77,17 +77,19 @@ export const ContainerData=styled.div`
     flex:1;
     padding: 0 5px;
  
+`
 
- .data-top{
-    margin: 15px 0;
+export const BoxDataTop=styled.div`
+  margin: 15px 0;
     padding: 0 5px;
+   
     
     .cx-name{
         .name{
             margin-right:5px;
-            font-weight:bold;
-            font-size:18px;
-           
+            font-size: 20px;
+            font-weight: 700;
+            text-shadow: 0 0 5px #997d95;
         }
         .category{
             color:${ThemeStyle.bgAppSystem};
@@ -100,29 +102,54 @@ export const ContainerData=styled.div`
        
     }
    
-.ingredientes{
-    font-style:italic;
-   font-size:13px;
-   color:${ThemeStyle.colorIngredientsCategory};
-  word-break:break-all;
-   text-align:justify;
-}
+   
     .cx-price{
         padding: 12px 0;
         color: ${ThemeStyle.bgTheme};
         font-size:2rem;
    
     }
- }
 
- .data-bottom{
-    font-size:14px;
+    @media screen and (max-width:780px){
+        background-color:#FFF;
+        .cx-qdt{
+                align-items:center;
+                text-align:center;
+            
+        }
+            .cx-price{
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                padding: 0;
+                height: 55px;
+                font-size: 20px;
+                font-weight: 700;
+                width: 100%;
+                
+                .price-modal{
+                    background-color: #aaa;
+                    padding: 12px 30px;
+                    border-radius: 30px;
+                    max-width: 190px;
+                }
+            }
+}
+
+  
+
+
+`
+
+export const BoxDataBottom=styled.div`
+ font-size:14px;
     p{
             color: ${ThemeStyle.colorIngredientsCategory};
             font-size:15px;
     }
     .qdt-modal{
         color: ${ThemeStyle.bgTheme};
+       
     }
 
     .container-btn-add{
@@ -200,42 +227,10 @@ export const ContainerData=styled.div`
                background: transparent;
             }
         }
-    }
 
 
  }
 
-  
-
-@media screen and (max-width:780px){
-    background-color:#FFF;
-   .cx-qdt{
-        align-items:center;
-        text-align:center;
-      
-   }
-    .cx-price{
-        display: family;
-        justify-content:center;
-        align-items: center;
-        padding: 0;
-        height: 55px;
-        font-size: 20px;
-        background-color: #c4c4c2;
-    }
     
-    
-}
-
-@media screen and (max-width:300px){
-    padding: 12px;
-    p{
-        text-align:center;
-      font-size:12px;
-    }
-
-   }
-
-
 
 `

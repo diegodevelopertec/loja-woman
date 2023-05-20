@@ -21,8 +21,8 @@ border-radius:5px;
     .area-left{
     display: flex;
       img{
-        height:30px;
-        width:30px;
+        height:50px;
+        width:auto;
       }
       .price{
         color: ${ThemeStyle.bgTheme};
@@ -36,14 +36,8 @@ border-radius:5px;
             }
       }
 
-      @media screen and (max-width:950px){
-        img{
-          img{
-        weight:25px;
-        height: 25px;
-      }
-        }
-      }
+
+      
   }
 
   .area-right{
@@ -54,6 +48,7 @@ border-radius:5px;
             padding: 10px;
             border: none;
             display:flex;
+            font-family: 'Poppins';
             justify-content:center;
             width: 30px;
             cursor:pointer;

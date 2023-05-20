@@ -12,16 +12,16 @@ type stateModalType={
 
 
 
-export const modalLoginContext=createContext<stateModalType >(null!)
+export const modalContext=createContext<stateModalType >(null!)
 
-export const ModalLoginProvider=({children}:Props)=>{
+export const ModalProvider=({children}:Props)=>{
     let [stateModal,handleStateModal]=useState(false)
   
-return <modalLoginContext.Provider value={{stateModal,handleStateModal}}>
+return <modalContext.Provider value={{stateModal,handleStateModal}}>
     {children}
-</modalLoginContext.Provider>
+</modalContext.Provider>
 
 }
 
 
-export const useMenuMobile=()=>useContext(modalLoginContext)
+export const useModalContext=()=>useContext(modalContext)

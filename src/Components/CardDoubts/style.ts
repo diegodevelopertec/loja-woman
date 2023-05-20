@@ -35,7 +35,7 @@ button{
 `
 export const BoxResponse=styled.div<Props>`
 display:${Props=>Props.display ? 'flex' : 'none'};
-padding: 12px;
+padding:30px  12px;
 background-color: #ced1cd;
 border-radius: 6px;
 color: #191a19;

@@ -1,5 +1,5 @@
 import { Box,CardInput,BoxFormButtons, BoxCardInputs } from "./style"
-import { useState } from "react"
+import React, { FormEvent, useState } from "react"
 import LapisIcon from './../../assets/imgs/lapis.png'
 import LixeiraIcon from './../../assets/imgs/lixeira.png'
 import SaveIcon from './../../assets/imgs/save.png'
@@ -9,8 +9,16 @@ import { Button } from "antd"
 export const FormDataAddress=()=>{
     const [disabled,setDisabled]=useState(true)
 
+
+    const onSubmit=(e:FormEvent<HTMLFormElement>)=>{
+        e.preventDefault()
+        setDisabled(false)
+    }
+
+
+
     return <Box>
-        <form action="">
+        <form action="" >
             <BoxCardInputs>
                 <CardInput state>
                     <label htmlFor="">Rua:</label>
@@ -44,10 +52,10 @@ export const FormDataAddress=()=>{
                 </CardInput>
             </BoxCardInputs>
             <BoxFormButtons>
-                {!disabled && <button className="save"><img src={SaveIcon} alt="" />Salvar</button>}
+                {!disabled && <button className="save" type="submit" onClick={()=>onSubmit}><img src={SaveIcon} alt="" />Salvar</button>}
                 {disabled && <div className="cx-btns">
                     <button className="edit" onClick={()=>setDisabled(false)}><img src={LapisIcon} alt="" /> Editar</button>
-                    <button className="cancel" >Cancelar</button>
+                    <button className="cancel"  onClick={()=>setDisabled(false)}>Cancelar</button>
                 
                 </div>}
             </BoxFormButtons>

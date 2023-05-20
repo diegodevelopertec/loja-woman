@@ -9,5 +9,6 @@ export type Product={
     images?:[],
     qdt:number,
     tamanho?:string,
-    mumero?:string
+    numero?:string,
+
 }

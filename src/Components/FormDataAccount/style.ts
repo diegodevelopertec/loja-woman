@@ -10,6 +10,19 @@ export const Box=styled.div`
 width: auto;
 margin: 35px 0;
 
+
+.account-delete{
+    border: none;
+    background-color: transparent;
+    font-family: Poppins;
+    cursor: pointer;
+    transition:all ease .3s;
+
+    &:hover{
+        text-decoration:underline; 
+        
+    }
+}
 `
 
 export const BoxCardInputs=styled.div`

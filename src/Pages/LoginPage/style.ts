@@ -43,6 +43,9 @@ export const BoxLogin=styled.div`
         color: ${ThemeStyle.bgTheme};
         font-size: 25px;
     }
+    span{
+    margin-left: 5px;
+}
 
     @media screen and (max-width:750px) {
         width: 90vw;

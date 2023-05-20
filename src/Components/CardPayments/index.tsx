@@ -6,6 +6,11 @@ type PaymentsType={
     numberCard:string,
     validatecode:number,
     passwordcard:string | number,
+    type:string,
+    dateValidate:string,
+    dateCreate:string
+
+
 }
 
 type Props={

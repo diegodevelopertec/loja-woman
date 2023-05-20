@@ -10,7 +10,6 @@ import { dataIntima } from "../../data/Product"
 import { ThemeStyle } from "../../../styled"
 import { useContextApp } from "../../hooks/useContextApp"
 import { BannerPromotions } from "../../Components/BannerPromotions"
-import { useModalLogin } from "../../hooks/useModeLogin"
 import { useAuthContext } from "../../hooks/useContextAuth"
 import  womanBurguer from './../../assets/imgs/banner_main_rf.png'
 import  womanBannerMain from './../../../public/imgs/bannerImage.png'
@@ -23,7 +22,7 @@ import FaceIcon from  './../../../public/imgs/face.png'
 
 export const Showcase=()=>{
    
-    const {stateModal,handleStateModal}=useModalLogin()
+   
     const {state,dispatch}=useContextApp()
     const [blousesProductList,setBlousesProductList]=useState<Product[] >(dataBlusas)
     const [shortsProductList,setShortsProductList]=useState<Product[]>(dataShorts)
@@ -34,7 +33,6 @@ export const Showcase=()=>{
     const [displayRestaurant,setDisplayRestaurant]=useState<boolean>(false)
     const [displayPanties,setDisplayPanties]=useState<boolean>(false)
     const [stateModalToCard,setModalToCard]=useState(false)
-    const isLogged=stateModal
     let {user}=useAuthContext()
   
 

@@ -5,13 +5,13 @@ import './index.css'
 import { BrowserRouter as RouterApp } from 'react-router-dom'
 import { ContextProvider } from './Context/ContextProvider'
 import { AuthProvider } from './Context/AuthContext'
-import {ModalLoginProvider} from './Context/modaLoginContext'
+import {ModalProvider} from './Context/modalContext'
 import { MenuMobileProvider } from './Context/menuMobileContext'
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <MenuMobileProvider>
-    <ModalLoginProvider>
+    <ModalProvider>
       <ContextProvider>
             <AuthProvider>
                      <RouterApp>
@@ -21,6 +21,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                      </RouterApp>
             </AuthProvider>
    </ContextProvider>
- </ModalLoginProvider>
+ </ModalProvider>
   </MenuMobileProvider>
 )

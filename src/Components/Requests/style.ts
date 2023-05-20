@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { ThemeStyle } from "../../../styled";
-import { theme } from "antd";
 
 type Props={
     openBody:boolean
@@ -26,6 +25,7 @@ export const  RequestHeader=styled.div`
     }
     .cx-btns{
         display: flex;
+        font-family: 'Poppins';
     }
     button{
         text-transform:uppercase;

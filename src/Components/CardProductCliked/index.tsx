@@ -3,7 +3,6 @@ import {useEffect, useState } from 'react'
 import { Product } from '../../Types/Products';
 import { useContextApp } from '../../hooks/useContextApp';
 import { toast } from "react-toastify"
-import { useModalLogin } from '../../hooks/useModeLogin';
 
 type Props={
     funcOffModal:()=>void;
@@ -16,7 +15,7 @@ export const CardCliked=({funcOffModal,data}:Props)=>{
     const [qdtProduct,setQdtProduct]=useState(1)
     const [priceModal,setPriceModal]=useState(data.price)
     const {state,dispatch}=useContextApp()
-    const {handleStateModal}=useModalLogin()
+    
    
  
 
@@ -65,7 +64,7 @@ const setData=()=>{
            <img src={`${data?.imageProduct}`} alt="" />
         </S.ContainerImage>
         <S.ContainerData>
-            <div className="data-top">
+            <S.BoxDataTop>
                 <div className="cx-name">
                    <span className='name'>  {data.name.length > 30 ? data.name.slice(0,27) + '...' : data.name}</span>
                 </div>
@@ -75,8 +74,8 @@ const setData=()=>{
                         R$ {priceModal.toFixed(2)}
                     </div>
                 </div>
-            </div>
-            <div className="data-bottom">
+            </S.BoxDataTop>
+            <S.BoxDataBottom>
                <div className="cx-qdt">
                     <p>Selecione uma quantidade desejada:</p>
                     <div className='area-btn-qdt'>
@@ -92,7 +91,7 @@ const setData=()=>{
                         <button className='btn-cancel' onClick={funcOffModal}>voltar</button>
                     <button className='btn-save' onClick={()=>setData()}>adicionar ao carrinho</button> 
             </div>
-            </div>
+            </S.BoxDataBottom>
         </S.ContainerData>
     </S.Container>
 }

@@ -15,7 +15,7 @@ import InterIcon from  './../public/imgs/intericon.png'
 const App=()=>{
 
   return <S.Body>
-        <S.LeftContent>
+        <S.LeftContent >
             <S.Menu>
               <ButtonMenu 
                   src={LojaIcon}

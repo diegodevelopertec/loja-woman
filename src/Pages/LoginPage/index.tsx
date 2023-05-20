@@ -35,7 +35,7 @@ export const LoginPage=()=>{
      
     return <Box>
         <BoxLogin>
-            <h3>Entrar</h3>
+            <h3>Entrar <span>|LaddyModas</span></h3>
             <BoxForm>
                 <form action=""  onSubmit={handleSubmit(onSubmit)}>
                   <CardInput>

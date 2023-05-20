@@ -5,16 +5,16 @@ import { useContextApp } from "../../hooks/useContextApp"
 import { useState,useEffect } from "react"
 import { Product } from "../../Types/Products"
 import { useNavigate } from "react-router-dom"
-import { useModalLogin } from "../../hooks/useModeLogin"
 import { useAuthContext } from "../../hooks/useContextAuth"
 import uuid from 'uuid'
 import { ProductBad } from "../../Components/ProductBad"
+
+
 
 export const CartPage=()=>{
     const {state,dispatch}=useContextApp()
     let   [products,setProducts]=useState<Product[]>(state.products)
     const navigate=useNavigate()
-    let {stateModal,handleStateModal}=useModalLogin()
     const {user,address}=useAuthContext()
     const [total,setTotalValues]=useState(0)
 
@@ -25,17 +25,24 @@ export const CartPage=()=>{
       },[state.products,state.requests])
 
       const setDataToRequests=()=>{
-        let data={
-            id: '',
-            dateRequest:Date.now(),
-            state: 'entregue',
-            products: products,
-            address: address,
-            totalValueProduct:total
-        }
-            dispatch({   type:'setDataToRequest', payload:{data}})
-           state.products=[]
-           navigate('/compras')
+       if(user !== null){
+            let data={
+                id: '',
+                dateRequest:Date.now(),
+                state: 'entregue',
+                products: products,
+                address: address,
+                totalValueProduct:total
+            }
+            if(data.products.length > 0 ){
+                    dispatch({   type:'setDataToRequest', payload:{data}})
+                    state.products=[]
+                    navigate('/compras')
+            }
+       }else{
+        navigate('/login')
+       
+       }
         }
      
 

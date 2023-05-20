@@ -1,4 +1,4 @@
-import { Box,CardInput,BoxFormButtons, BoxCardInputs,CardSelect, BoxPayments, BoxForm } from "./style"
+import { Box,CardInput,BoxFormButtons, BoxCardInputs,CardSelect, BoxPayments, BoxForm, BoxCard, CardImage, CardImageVersus } from "./style"
 import React, { useState } from "react"
 import LapisIcon from './../../assets/imgs/lapis.png'
 import LixeiraIcon from './../../assets/imgs/lixeira.png'
@@ -7,15 +7,39 @@ import { Button, Divider } from "antd"
 import { CardPayments } from "../CardPayments"
 
 
+type dataFormPay={
+
+    titular:string,
+    validateCode:string,
+    numberCard:string,
+    passwordCard:string,
+    type:string,
+
+}
+
+
 export const FormDataPayments=()=>{
     const [disabled,setDisabled]=useState(true)
-    const [newPaymentForm,setNewPaymentForm]=useState(false)
-    const [payments,setPayements]=useState([{
-        id:1,
-        titular:'Caio',
+    const [formPay,setFormPay]=useState({
+        titular:'Caio Gomes Soareas',
         numberCard:'353743273934-00',
         validatecode:224,
         passwordcard:'e4rrrrr',
+        type:'',
+        dateValidate:'05/22',
+        dateCreate:'06/29',
+    })
+    
+    const [newPaymentForm,setNewPaymentForm]=useState(false)
+    const [payments,setPayments]=useState([{
+        id:1,
+        titular:'Caio Gomes Soareas',
+        numberCard:'353743273934-00',
+        validatecode:224,
+        passwordcard:'e4rrrrr',
+        type:'',
+        dateValidate:'05/22',
+        dateCreate:'06/29',
     },{
     
             id:2,
@@ -23,6 +47,9 @@ export const FormDataPayments=()=>{
             numberCard:'353743273934-00',
             validatecode:224,
             passwordcard:'e4rrrrr',
+            type:'',
+            dateValidate:'05/22',
+            dateCreate:'06/29',
         
     }])
 
@@ -37,6 +64,30 @@ export const FormDataPayments=()=>{
     return <Box>
         {!newPaymentForm && <div className="new-pay">Adicionar novo Pagamento <button onClick={()=>setNewPaymentForm(true)}>+</button><hr /></div>}
        <BoxForm display={newPaymentForm}>
+            <BoxCard>
+                <CardImage>
+                    <div className="card-top">
+                        <div className="number">
+                            <span>{formPay.numberCard}</span>
+                        </div>
+                        <div className="codes">
+                            <div className="codes-code">
+                                <span>{formPay.dateCreate}</span>
+                                <span>{formPay.dateValidate}</span>
+                            </div>
+                            <div className="bandeira">
+                               <img width="48" height="48" src="https://img.icons8.com/color/48/visa.png" alt="visa"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card-bottom">
+                        <span className="name-titular">{formPay.titular ? formPay.titular : 'Titular'}</span>
+                    </div>
+                </CardImage>
+                <CardImageVersus>
+                    dd
+                </CardImageVersus>
+            </BoxCard>
             <form action="" onSubmit={onSubmit}>
                     <BoxCardInputs>
                         <CardInput state>
@@ -71,7 +122,6 @@ export const FormDataPayments=()=>{
                         </CardInput>
                         <CardSelect>
                             <select name="" id="">
-                                <legend >Tipo:</legend>
                                 <option value="">Crédito</option>
                                 <option value="">Débito</option>
                             </select>
