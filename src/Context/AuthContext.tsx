@@ -39,20 +39,25 @@ export const AuthContext=createContext<AuthType >(null!)
 
 export const AuthProvider=({children}:Props)=>{
 
+    const [user,setUser]=useState<UserType | null>(null)
+    const [address,setAddress]=useState<AddressType | null>(null)
+    const [token,setToken]=useState<string | null>()
+    const [requestsHistory,setRequestHistory]=useState<RequestType >([])
+
     useEffect(()=>{
 
         //Pegando token e dados do usuario do localstorage
         let userStorage =JSON.parse(localStorage.getItem('u') as string)
         let tokenStorage=localStorage.getItem('token') as string
-        let addressRequests=JSON.parse(localStorage.getItem('addressRequests') as string)
+        let addressStorage=JSON.parse(localStorage.getItem('address') as string)
         let requestsHistoryStorage=JSON.parse(localStorage.getItem('requestsHistory') as string)
     
     
     
         //setando dados do localStorage
-        if(userStorage ||  tokenStorage || addressRequests || requestsHistoryStorage){
+        if(userStorage ||  tokenStorage || addressStorage || requestsHistoryStorage){
           setUser(userStorage)
-          setAddress(addressRequests)
+          setAddress(addressStorage)
           setToken(tokenStorage)
           setRequestHistory(requestsHistoryStorage)
         }
@@ -60,10 +65,6 @@ export const AuthProvider=({children}:Props)=>{
     },[])
 
    
-    const [user,setUser]=useState<UserType | null>(null)
-    const [address,setAddress]=useState<AddressType | null>(null)
-    const [token,setToken]=useState<string | null>()
-    const [requestsHistory,setRequestHistory]=useState<RequestType >([])
  
 
 
@@ -96,6 +97,8 @@ export const AuthProvider=({children}:Props)=>{
     const Logout=()=>{
         if(user){
             setUser(null)
+            setAddress(null)
+            
             localStorage.clear()
         }
 

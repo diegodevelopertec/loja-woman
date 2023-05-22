@@ -24,7 +24,7 @@ export const CartPage=()=>{
       },[state.products,state.requests])
 
       const setDataToRequests=()=>{
-       if(user !== null || address !== null){
+       if(user !== null && address !== null){
             let data={
                 id: '',
                 dateRequest:Date.now(),
@@ -38,15 +38,14 @@ export const CartPage=()=>{
                     state.products=[]
                     navigate('/compras')
             }
-       }else if(address === null){
-            toast.error('Cadatre um endereço');
-       } else{
-           navigate('/login')
-       
-       }
-        }
-     
 
+      
+        } else if(user  === null){
+            toast.error('Faça login ou crie uma conta')
+        }else if(address  === null){
+         toast.error('Cadastre um endereço')
+        }
+      }
 
 
      const ClearCart=()=>{

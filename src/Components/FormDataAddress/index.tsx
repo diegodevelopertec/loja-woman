@@ -62,6 +62,7 @@ export const FormDataAddress=()=>{
         console.log(data);
         setAddress(data)
         setDisabled(true)
+        localStorage.setItem('address',JSON.stringify(data))
     }
 
 
