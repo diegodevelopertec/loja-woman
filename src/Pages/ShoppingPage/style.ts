@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ThemeStyle } from "../../../styled";
-import { theme } from "antd";
+
 
 export const Box=styled.div`
     padding: 50px;
