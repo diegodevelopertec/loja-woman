@@ -4,9 +4,9 @@ import { AddressType } from "./AddressType"
 
 
  export type RequestDataType={
-    id:string,
-    dateRequest:string,
-    state:'pendente' | 'entregue',
+    id:string | number,
+    dateRequest:string | number,
+    state:string,
     products:Product[]  ,
     address:AddressType,
     totalValueProduct:number

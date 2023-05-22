@@ -14,7 +14,7 @@ export const CartPage=()=>{
     const {state,dispatch}=useContextApp()
     let   [products,setProducts]=useState<Product[]>(state.products)
     const navigate=useNavigate()
-    const {user,address}=useAuthContext()
+    const {user,address,addRequest}=useAuthContext()
     const [total,setTotalValues]=useState(0)
 
     useEffect(()=>{
@@ -26,7 +26,7 @@ export const CartPage=()=>{
       const setDataToRequests=()=>{
        if(user !== null && address !== null){
             let data={
-                id: '',
+                id:Math.floor(Math.random() * 99999),
                 dateRequest:Date.now(),
                 state: 'entregue',
                 products: products,
@@ -34,7 +34,7 @@ export const CartPage=()=>{
                 totalValueProduct:total
             }
             if(data.products.length > 0 ){
-                    dispatch({   type:'setDataToRequest', payload:{data}})
+                    addRequest(data)
                     state.products=[]
                     navigate('/compras')
             }

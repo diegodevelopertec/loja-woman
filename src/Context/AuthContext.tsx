@@ -2,7 +2,7 @@ import { ReactNode, useState ,createContext, useEffect, useContext } from "react
 import { UserType } from "../Types/UserType";
 import {v4 as uuid} from 'uuid'
 import { AddressType } from "../Types/AddressType";
-import { RequestType } from "../Types/RequestType";
+import { RequestDataType, RequestType } from "../Types/RequestType";
 import { useApiUser } from "../Services/user.services";
 import { toast } from "react-toastify";
 
@@ -28,7 +28,10 @@ type AuthType={
     address:AddressType | null,
     setAddress:(address:AddressType)=>void,
     ClearAddress:()=>void,
-    requestsHistory:RequestType | [],
+    requests:RequestType | [],
+    setRequest:(data:RequestType)=>void,
+    addRequest:(data:RequestDataType)=>void,
+    removeRequest:(id:number | string)=>void,
     LoginAuth:(email:string,password:string)=>boolean,
     registerUser:(data:registerType)=>any,
     updateUser:(data:registerType)=>any,
@@ -42,7 +45,10 @@ export const AuthProvider=({children}:Props)=>{
     const [user,setUser]=useState<UserType | null>(null)
     const [address,setAddress]=useState<AddressType | null>(null)
     const [token,setToken]=useState<string | null>()
-    const [requestsHistory,setRequestHistory]=useState<RequestType >([])
+    const [requests,setRequest]=useState<RequestType >([])
+
+
+  
 
     useEffect(()=>{
 
@@ -50,18 +56,21 @@ export const AuthProvider=({children}:Props)=>{
         let userStorage =JSON.parse(localStorage.getItem('u') as string)
         let tokenStorage=localStorage.getItem('token') as string
         let addressStorage=JSON.parse(localStorage.getItem('address') as string)
-        let requestsHistoryStorage=JSON.parse(localStorage.getItem('requestsHistory') as string)
+        let requestsStorage=JSON.parse(localStorage.getItem('requests') as string)
     
     
     
         //setando dados do localStorage
-        if(userStorage ||  tokenStorage || addressStorage || requestsHistoryStorage){
+        if(userStorage ||  tokenStorage || addressStorage || requestsStorage){
           setUser(userStorage)
           setAddress(addressStorage)
           setToken(tokenStorage)
-          setRequestHistory(requestsHistoryStorage)
+          setRequest(requestsStorage)
         }
-
+       console.log(userStorage)
+       console.log(addressStorage);
+       console.log(requestsStorage);
+    
     },[])
 
    
@@ -78,11 +87,9 @@ export const AuthProvider=({children}:Props)=>{
            
             localStorage.setItem('u',JSON.stringify(data))
             localStorage.setItem('token',JSON.stringify(tokenJson))
-            let addressRequests=JSON.parse(localStorage.getItem('addressRequests') as string)
-            setAddress(addressRequests)
+          
         return true
         }
-
         return false
     }
 
@@ -98,7 +105,6 @@ export const AuthProvider=({children}:Props)=>{
         if(user){
             setUser(null)
             setAddress(null)
-            
             localStorage.clear()
         }
 
@@ -114,8 +120,7 @@ const updateUser=(data:registerType)=>{
          toast.success('Dados de conta alterados')
         localStorage.setItem('u',JSON.stringify(data))
         localStorage.setItem('token',JSON.stringify(tokenJson))
-        let addressRequests=JSON.parse(localStorage.getItem('addressRequests') as string)
-        setAddress(addressRequests)
+        setAddress(JSON.parse(localStorage.getItem('addressRequests') as string))
     return true
     }
 
@@ -128,7 +133,15 @@ const  ClearAddress=()=>{
     setAddress(null)
 }
 
-return <AuthContext.Provider value={{ClearAddress,requestsHistory,setAddress, address,LoginAuth,Logout,registerUser,user,updateUser}}>
+
+const addRequest=(data:RequestDataType)=>{
+    setRequest([data,...requests])
+}
+const removeRequest=(id:number | string)=>{
+    let newList=requests.filter(i=>i.id !== id)
+    setRequest(newList)
+}
+return <AuthContext.Provider value={{setRequest,addRequest,removeRequest,ClearAddress,requests,setAddress, address,LoginAuth,Logout,registerUser,user,updateUser}}>
     {children}
 </AuthContext.Provider>
 

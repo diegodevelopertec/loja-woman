@@ -1,35 +1,29 @@
 import { useState } from 'react'
 import * as S from './style'
-import { Context } from '../../Context/Context'
-import { useContext } from 'react'
-import { ProductBad } from '../ProductBad'
 import { ProductRequest } from '../ProductRequest'
-import { Product } from '../../Types/Products'
-import { RequestDataType, RequestType } from '../../Types/RequestType'
+import { RequestDataType} from '../../Types/RequestType'
 import { useContextApp } from '../../hooks/useContextApp'
-import openIcon from './../../assets/imgs/setbaixo.png'
 import closeIcon from './../../assets/imgs/close.png'
+import openIcon from './../../assets/imgs/setbaixo.png'
 import lixeiraIcon from './../../assets/imgs/lixeira.png'
 import { useAuthContext } from '../../hooks/useContextAuth'
-
+import { toast } from 'react-toastify'
 
 type Props={
     dataRequests:RequestDataType
 }
 
 export const Requests=({dataRequests}:Props)=>{
-    const {state,dispatch}=useContextApp()
+  
     const [openBody,setOnBody]=useState(false)
-    const {address}=useAuthContext()
+    const {address,removeRequest}=useAuthContext()
 
     const setBodyRequest=()=>{
         !openBody  ? setOnBody(true) : setOnBody(false)
     }
-    const removeRequestData=()=>{
-        dispatch({
-            type:'removeRequest',
-            payload:{data:dataRequests}
-        })
+    const removeRequestData=(id:string | number)=>{
+        removeRequest(id)
+        toast.success('removido do historico')
     }
 
     return <S.Container>
@@ -39,7 +33,7 @@ export const Requests=({dataRequests}:Props)=>{
                 <span>{dataRequests.state}</span>
            </div>
            <div className="cx-btns">
-                <button className="apagar" onClick={removeRequestData}>
+                <button className="apagar" onClick={()=>removeRequestData(dataRequests.id)}>
                     <img src={lixeiraIcon} />
                     <span>apagar</span>
                 </button>
@@ -80,13 +74,8 @@ export const Requests=({dataRequests}:Props)=>{
                     <div className="linha">
                        <span>Total</span> <span> R$ {dataRequests.totalValueProduct.toFixed(2)}</span>
                     </div>
-                  
-              
               </S.AreaDetails>
-           
         </S.RequestBody>
-    
-    
     </S.Container>
 
 }
