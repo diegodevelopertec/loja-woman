@@ -10,15 +10,21 @@ export const Box=styled.div`
     padding: 25px;
 
     @media screen and (max-width:760px) {
-        font-size: 15px;
         justify-content: space-between;
+        padding: 5px;
+        font-size: 12px;
+       
     }
 `
 
 export const BoxLeft=styled.div`
 display: grid;
 grid-template-columns: repeat(2,1fr);
+justify-content: center;
+align-items: center;
 color: #0d0c0c;
+flex: 1;
+
 
 @media screen and (max-width:760px) {
         display: flex;
@@ -29,7 +35,13 @@ color: #0d0c0c;
 
 export const BoxRight=styled.div`
 display: flex;
+align-items: center;
+justify-content: center;
+width:max-content ;
 button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 12px 30px;
     margin: 6px;
     border-radius: 4px;
@@ -46,7 +58,8 @@ button{
     }
 
     @media screen and (max-width:760px) {
-        padding: 6px 10px;
+        padding: 3px 12px;
+        font-size: 10px;
     }
 }
 

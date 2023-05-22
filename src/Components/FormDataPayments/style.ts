@@ -225,5 +225,9 @@ select{
 export const BoxPayments=styled.div`
 padding: 0 5px;
 
+@media screen and (max-width:950px) {
+    padding: 0;
+}
+
 
 `

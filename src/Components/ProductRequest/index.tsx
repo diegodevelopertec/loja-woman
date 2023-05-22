@@ -32,7 +32,7 @@ export const ProductRequest=({data}:Props)=>{
      </div>
      <div className="area-right">
          <div className="counter">
-            <div className="cx-qdt"> Qdt {data.qdt} </div>
+            <div className="cx-qdt"> {data.qdt}x </div>
          </div>
      </div>
             

@@ -35,14 +35,14 @@ export const  RequestHeader=styled.div`
         justify-content:center;
         align-items:center;
         color: white;
-        font-size:13px;
+        font-size:10px;
         border-radius:5px;
         margin:0 5px;
         border: none;
         width: 100px;
         img{
-                height: 20px;
-                width: 20px;
+                height: 15px;
+                width: 15px;
                 margin: 0 3px;
              }
         &:hover{
@@ -50,6 +50,15 @@ export const  RequestHeader=styled.div`
              background: #3cbd4b;
             
         }
+    }
+
+    .btn-del{
+        &:hover{
+             cursor: pointer;
+             background:  #b01a2e;
+            
+        }
+       
     }
 
 
@@ -63,7 +72,8 @@ export const  RequestHeader=styled.div`
         flex-direction:row;
     }
 
-   .cx-btns{ button{
+   .cx-btns{ 
+     button{
         width: 35px;
         padding: 12px;
         span{
@@ -123,6 +133,9 @@ export const AreaAdress=styled.div`
         padding: 10px ;
      }
     
+    strong{
+        margin-right: 3px;
+    }
 `
 export const AreaDetails=styled.div`
     .linha{

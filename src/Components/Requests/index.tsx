@@ -2,7 +2,6 @@ import { useState } from 'react'
 import * as S from './style'
 import { ProductRequest } from '../ProductRequest'
 import { RequestDataType} from '../../Types/RequestType'
-import { useContextApp } from '../../hooks/useContextApp'
 import closeIcon from './../../assets/imgs/close.png'
 import openIcon from './../../assets/imgs/setbaixo.png'
 import lixeiraIcon from './../../assets/imgs/lixeira.png'
@@ -33,7 +32,7 @@ export const Requests=({dataRequests}:Props)=>{
                 <span>{dataRequests.state}</span>
            </div>
            <div className="cx-btns">
-                <button className="apagar" onClick={()=>removeRequestData(dataRequests.id)}>
+                <button className="btn-del" onClick={()=>removeRequestData(dataRequests.id)}>
                     <img src={lixeiraIcon} />
                     <span>apagar</span>
                 </button>

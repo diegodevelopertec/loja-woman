@@ -78,14 +78,14 @@ button{
 
 @media screen  and (max-width:950px){
     button{
-    font-size: 15px;
-    padding:15px 23px;
-    border: none;
-    border-radius: 4px;
-    margin: 10px;
-    box-shadow: 0 0 5px #eee;
-    cursor: pointer;
-    color: #FFFF;
+        font-size: 15px;
+        padding:15px 13px;
+        border: none;
+        border-radius: 4px;
+        margin: 10px;
+        box-shadow: 0 0 5px #eee;
+        cursor: pointer;
+        color: #FFFF;
 }
 }
 `

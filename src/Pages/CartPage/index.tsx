@@ -24,31 +24,37 @@ export const CartPage=()=>{
       },[state.products,state.requests])
 
       const setDataToRequests=()=>{
-       if(user !== null && address !== null){
-            let data={
-                id:Math.floor(Math.random() * 99999),
-                dateRequest:Date.now(),
-                state: 'entregue',
-                products: products,
-                address: address,
-                totalValueProduct:total
+        if(products.length !== 0){
+            if(user !== null && address !== null){
+                let data={
+                    id:Math.floor(Math.random() * 99999),
+                    dateRequest:Date.now(),
+                    state: 'entregue',
+                    products: products,
+                    address: address,
+                    totalValueProduct:total
+                }
+               
+                 addRequest(data)
+                 state.products=[]
+                 navigate('/compras')
+                
+    
+          
+            } else if(user  === null){
+                toast.error('Faça login ou crie uma conta')
+            }else if(address  === null){
+             toast.error('Cadastre um endereço')
             }
-            if(data.products.length > 0 ){
-                    addRequest(data)
-                    state.products=[]
-                    navigate('/compras')
-            }
-
-      
-        } else if(user  === null){
-            toast.error('Faça login ou crie uma conta')
-        }else if(address  === null){
-         toast.error('Cadastre um endereço')
+          
+        }else{
+            toast.error('Carrinho está vazio')
         }
-      }
+       
+    }
 
 
-     const ClearCart=()=>{
+        const ClearCart=()=>{
         dispatch({type:'clearListProducts'})
      }
 
