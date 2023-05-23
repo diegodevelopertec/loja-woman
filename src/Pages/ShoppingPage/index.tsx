@@ -23,7 +23,7 @@ useEffect(()=>{
         <h3>Compras</h3>
         <BoxShopping>
               {
-            requests.length > 0 ?  requests.map((i,k)=>(
+            requests!.length > 0 ?  requests!.map((i,k)=>(
                 <Requests dataRequests={i} key={k} />
               )) : <div className='error-request'>
                   <p>Nenhuma compra feita</p>
