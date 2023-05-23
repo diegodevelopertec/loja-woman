@@ -42,7 +42,7 @@ h3{
 `
 
 export const BoxDataPay=styled.div`
-margin: 25px 0;
+margin: 55px 0;
 h3{
     font-size: 22px;
     color: #212121;

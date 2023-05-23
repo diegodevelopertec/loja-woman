@@ -4,12 +4,17 @@ import LapisIcon from './../../assets/imgs/lapis.png'
 import LixeiraIcon from './../../assets/imgs/lixeira.png'
 import SaveIcon from './../../assets/imgs/save.png'
 import { CardPayments } from "../CardPayments"
+import { yupResolver } from "@hookform/resolvers/yup"
+import * as yup from 'yup'
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useAuth } from "../../Context/AuthContext"
 
 
-type dataFormPay={
-
+type FormPay={
     titular:string,
     validateCode:string,
+    dateValidity:string,
+    nameCard:string,
     numberCard:string,
     passwordCard:string,
     type:string,
@@ -18,44 +23,47 @@ type dataFormPay={
 
 
 export const FormDataPayments=()=>{
-    const [disabled,setDisabled]=useState(true)
-    const [formPay,setFormPay]=useState({
-        titular:'Caio Gomes Soareas',
-        numberCard:'353743273934-00',
-        validatecode:224,
-        passwordcard:'e4rrrrr',
-        type:'',
-        dateValidate:'05/22',
-        dateCreate:'06/29',
-    })
+    const [disabled,setDisabled]=useState(false)
+    const [formPay,setFormPay]=useState()
+    
+    const schema=yup.object({
+        titular:yup.string().required(),
+        validateCode:yup.string().required().max(3),
+        dateValidity:yup.string().required('somente mês e ano').max(6),
+        nameCard:yup.string().required(),
+        numberCard:yup.string().matches(/^\d{16}$/, 'Número de cartão inválido').required('Número de cartão é obrigatório'),
+        passwordCard:yup.string().required().min(6),
+        type:yup.string().required(),
+    }).required()
+
+
+    const {register,handleSubmit,formState:{errors},reset}=useForm<FormPay>({ 
+        resolver:yupResolver(schema),
+        defaultValues:{
+            titular:'',
+            validateCode:'',
+            nameCard:'',
+            numberCard:'',
+            passwordCard:'',
+            type:'',
+          
+          
+    } })
     
     const [newPaymentForm,setNewPaymentForm]=useState(false)
-    const [payments,setPayments]=useState([{
-        id:1,
-        titular:'Caio Gomes Soareas',
-        numberCard:'353743273934-00',
-        validatecode:224,
-        passwordcard:'e4rrrrr',
-        type:'',
-        dateValidate:'05/22',
-        dateCreate:'06/29',
-    },{
-    
-            id:2,
-            titular:'André',
-            numberCard:'353743273934-00',
-            validatecode:224,
-            passwordcard:'e4rrrrr',
-            type:'',
-            dateValidate:'05/22',
-            dateCreate:'06/29',
-        
-    }])
+    const {payments,addPayCard}=useAuth()
 
 
 
-    const onSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
-        e.preventDefault()
+    const onSubmit:SubmitHandler<FormPay>=(data:FormPay)=>{
+      addPayCard({
+        id:Math.floor(Math.random() * 999),
+        ...data
+      })
+
+        setDisabled(true)
+        setNewPaymentForm(false)
+        reset()
     }
 
 
@@ -63,11 +71,11 @@ export const FormDataPayments=()=>{
     return <Box>
         {!newPaymentForm && <div className="new-pay">Adicionar novo Pagamento <button onClick={()=>setNewPaymentForm(true)}>+</button><hr /></div>}
        <BoxForm display={newPaymentForm}>
-            <BoxCard>
+           { /*<BoxCard>
                 <CardImage>
                     <div className="card-top">
                         <div className="number">
-                            <span>{formPay.numberCard}</span>
+                            <span></span>
                         </div>
                         <div className="codes">
                             <div className="codes-code">
@@ -86,51 +94,58 @@ export const FormDataPayments=()=>{
                 <CardImageVersus>
                     dd
                 </CardImageVersus>
-            </BoxCard>
-            <form action="" onSubmit={onSubmit}>
+</BoxCard> */}
+            <form onSubmit={handleSubmit(onSubmit)} method="POST">
                     <BoxCardInputs>
                         <CardInput state>
                             <label htmlFor="">Nome do Titular:</label>
-                            <input type="text" value={'Diego Dutra Morais'} disabled={disabled} />
-                            <p>error</p>
+                            <input type="text" {...register('titular')} disabled={disabled} />
+                            <p>{errors.titular?.message}</p>
                         </CardInput>
                         <CardInput state>
                             <label htmlFor="">Número do cartão:</label>
-                            <input type="text" value={'diegodutramorais@gmail.com'} disabled={disabled} />
-                            <p>error</p>
+                            <input type="text" {...register('numberCard')} disabled={disabled} />
+                            <p>{errors.numberCard?.message}</p>
                         </CardInput>
                         <CardInput state>
-                            <label htmlFor="">CEP:</label>
-                            <input type="text" disabled={disabled} value={'+5531996724550'}/>
-                            <p>error</p>
+                            <label htmlFor="">Nome do cartão:</label>
+                            <input type="text" disabled={disabled} {...register('nameCard')} />
+                            <p>{errors.nameCard?.message}</p>
                         </CardInput>
                         <CardInput state>
                             <label htmlFor="">Código de segurança (CVV/CVC):</label>
-                            <input type="text" disabled={disabled} value={'eee96-04'}/>
-                            <p>error</p>
+                            <input type="text" disabled={disabled} {...register('validateCode')} />
+                            <p>{errors.validateCode?.message}</p>
                         </CardInput>
                         <CardInput state>
                             <label htmlFor="">Data de validade:</label>
-                            <input type="text" disabled={disabled} value={'125.901.696-04'} />
-                            <p>error</p>
+                            <input type="text" disabled={disabled} {...register('dateValidity')} />
+                            <p>{errors.dateValidity?.message}</p>
                         </CardInput>
                         <CardInput state>
                             <label htmlFor="">Senha:</label>
-                            <input type="text" disabled={disabled} value={'125.901.696-04'} />
-                            <p>error</p>
+                            <input type="text" disabled={disabled} {...register('passwordCard')} />
+                            <p>{errors.passwordCard?.message}</p>
                         </CardInput>
                         <CardSelect>
-                            <select name="" id="">
-                                <option value="">Crédito</option>
-                                <option value="">Débito</option>
+                            <select  {...register('type')}>
+    
+                                <option value="credito">Crédito</option>
+                                <option value="debito">Débito</option>
                             </select>
                         </CardSelect>
                     </BoxCardInputs>
                     <BoxFormButtons>
-                        {!disabled && <button className="save" onClick={()=>setDisabled(true)}><img src={SaveIcon} alt="" />Salvar</button>}
+                        {!disabled && < div className="cx-btns">
+                            <button type="submit" className="save" ><img src={SaveIcon} alt="" />Salvar</button>
+                            <button className="cancel" onClick={()=>setNewPaymentForm(false)} >Cancelar</button>
+                        </div>
+                    
+                    }
+                        
                         {disabled && <div className="cx-btns">
                             <button className="edit" onClick={()=>setDisabled(false)}><img src={LapisIcon} alt="" /> Editar</button>
-                            <button className="cancel" onClick={()=>setNewPaymentForm(false)} >Cancelar</button>
+                        
                         
                         </div>}
                     </BoxFormButtons>
@@ -142,7 +157,7 @@ export const FormDataPayments=()=>{
         {
             payments.length > 0 ? payments.map((i,k)=>(
                 <CardPayments pay={i} key={k} />
-            )) : <div>dd</div>
+            )) : <div>Nenhum cartão adicionado</div>
         }
     </BoxPayments>
     

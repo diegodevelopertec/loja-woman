@@ -8,11 +8,13 @@ export const Box=styled.div`
     margin: 12px 10px;
     box-shadow: 0 0 12px #787878;
     padding: 25px;
+  
 
     @media screen and (max-width:760px) {
         justify-content: space-between;
         padding: 5px;
         font-size: 12px;
+        width: auto;
        
     }
 `
@@ -20,6 +22,7 @@ export const Box=styled.div`
 export const BoxLeft=styled.div`
 display: grid;
 grid-template-columns: repeat(2,1fr);
+gap: 12px;
 justify-content: center;
 align-items: center;
 color: #0d0c0c;
@@ -29,6 +32,8 @@ flex: 1;
 @media screen and (max-width:760px) {
         display: flex;
         flex-direction: column;
+        margin: 0;
+      
     }
 
 `
@@ -37,7 +42,7 @@ export const BoxRight=styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-width:max-content ;
+width: max-content;
 button{
     display: flex;
     justify-content: center;

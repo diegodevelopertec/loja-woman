@@ -1,5 +1,5 @@
 import { Box,CardInput,BoxFormButtons, BoxCardInputs } from "./style"
-import { FormEvent, useState } from "react"
+import {useState } from "react"
 import LapisIcon from './../../assets/imgs/lapis.png'
 import LixeiraIcon from './../../assets/imgs/lixeira.png'
 import SaveIcon from './../../assets/imgs/save.png'
@@ -62,10 +62,9 @@ const onSubmit:SubmitHandler<InputTypes>=(data:InputTypes)=>{
 
 const LogoutAccount=()=>{
     Logout()
-   setTimeout(() => {
-     navigate('/')
-     toast.success('Conta deletada')
-   }, 1000)
+    navigate('/')
+    toast.success('Conta deletada')
+ 
 }
 
     return <Box>
@@ -98,12 +97,15 @@ const LogoutAccount=()=>{
                 </CardInput>
             </BoxCardInputs>
             <BoxFormButtons>
-                {!disabled && <button type="submit" className="save"><img src={SaveIcon} alt="" />Salvar</button>}
+                {!disabled && <div className="cx-btns">
+                      <button type="submit" className="save"><img src={SaveIcon} alt="" />Salvar</button>
+                      <button className="cancel" >Cancelar</button>
+                    </div>
+                }
                 {disabled && <div className="cx-btns">
                     <button className="edit" onClick={()=>setDisabled(false)}><img src={LapisIcon} alt="" /> Editar</button>
-                    <button className="cancel" >Cancelar</button>
-                
-                </div>}
+                 </div>
+                }
             </BoxFormButtons>
         </form>
     

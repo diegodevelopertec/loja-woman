@@ -24,7 +24,7 @@ type InputTypes={
 export const FormDataAddress=()=>{
     const {address,setAddress,ClearAddress}=useAuth()
     const [disabled,setDisabled]=useState(address === null ? false : true)
-    const [openFormAddress,setOpenFormAddress]=useState(true)
+    const [openFormAddress,setOpenFormAddress]=useState(address === null ? false : true)
 
     const schema=yup.object({
         rua:yup.string().required(),

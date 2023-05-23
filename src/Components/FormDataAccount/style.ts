@@ -92,7 +92,7 @@ button{
     display: flex;
     width: 100%;
     justify-content: center;
-    
+    margin: 35px 0;
     .edit{
         background-color:#20638c;
         &:hover{
