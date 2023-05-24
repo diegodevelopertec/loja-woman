@@ -29,7 +29,7 @@ export const AccountPage=()=>{
                 <p>Crie uma conta ou Faça Login<Link to={'/register'}>Clique aqui</Link></p>
                 <hr />
              </S.NotLogged>
-           }
+            }
         </BoxDataAccount>
         <BoxDataPay>
            <h3><img src={PayIcon} alt="" />Dados de Pagamento</h3>

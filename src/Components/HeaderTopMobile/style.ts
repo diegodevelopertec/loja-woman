@@ -21,6 +21,7 @@ export const Box=styled.div`
     justify-content: space-between;
     align-items: center;
     color: gray;
+    z-index: 1;
     
 }
 
